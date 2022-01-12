@@ -1,0 +1,35 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: inherit;
+  font: normal 125% / 1.4 $text-font-stack;
+}
+
+h1 {
+  @media (max-width: $breakpoint_lg) {
+  }
+  @media (max-width: $breakpoint_md) {
+  }
+}
+
+h2 {
+  @media (max-width: $breakpoint_lg) {
+  }
+  @media (max-width: $breakpoint_md) {
+  }
+}
+
+h3 {
+  @media (max-width: $breakpoint_lg) {
+  }
+  @media (max-width: $breakpoint_md) {
+  }
+}
+
+p {
+  @media (max-width: $breakpoint_lg) {
+  }
+  @media (max-width: $breakpoint_md) {
+  }
+}

@@ -1,0 +1,14 @@
+.container {
+    max-width: $width_xl; /* 1 */
+    margin-left: auto; /* 2 */
+    margin-right: auto; /* 2 */
+    box-sizing: border-box;
+    width: 100%; /* 1 */ 
+    @media (max-width: $breakpoint_lg) {
+        max-width: $width_lg;
+    }
+    @media (max-width: $breakpoint_md) {
+        max-width: $width_md;
+    }
+} 
+
