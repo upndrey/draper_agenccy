@@ -1,12 +1,18 @@
 /**
  * Basic typography style for copy text
  */
-body {
-  color: inherit;
-  font: normal 125% / 1.4 $text-font-stack;
-}
+
+ h1,h2,h3,h4,h5,h6,p {
+   margin: 0;
+ }
 
 h1 {
+  @include fw(400);
+  letter-spacing: 0.03em;
+  font-size: 80px;
+  line-height: 93px;
+  text-align: center;
+  color: #001429;
   @media (max-width: $breakpoint_lg) {
   }
   @media (max-width: $breakpoint_md) {
@@ -14,6 +20,9 @@ h1 {
 }
 
 h2 {
+  @include fw(700);
+  line-height: 61px;
+  font-size: 48px;
   @media (max-width: $breakpoint_lg) {
   }
   @media (max-width: $breakpoint_md) {
@@ -28,8 +37,16 @@ h3 {
 }
 
 p {
+  @include fw(400);
   @media (max-width: $breakpoint_lg) {
   }
   @media (max-width: $breakpoint_md) {
+  }
+}
+
+ul {
+  padding: 0;
+  li {
+    list-style: none;
   }
 }

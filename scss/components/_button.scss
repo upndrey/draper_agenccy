@@ -1,3 +1,29 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+.btn_action {
+    @include fw(700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 227px;
+    height: 40px;
+
+    background: #FFAA00;
+    border: 2px solid #001429;  
+    box-sizing: border-box;
+    color: #001429;
+    box-shadow: -2px 4px 0px #001429;
+    border-radius: 7px;
+    transition: 1s;
+    position: relative;
+    left: 2px;
+    bottom: 4px;
+    cursor: pointer;
+    &:hover {
+        left: 0px;
+        bottom: 0px;
+        box-shadow: 0px 0px 0px #001429;
+    }
+}

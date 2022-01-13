@@ -41,11 +41,11 @@
 
 @mixin fw($weight:700) {
   @if($weight == 400) {
-    font-family: 'CaviarDreams';
+    font-family: CaviarDreams;
     font-weight: 400;
   }
   @else {
-    font-family: 'CaviarDreams-Bold';
+    font-family: CaviarDreams-Bold;
     font-weight: 700;
   }
 }
