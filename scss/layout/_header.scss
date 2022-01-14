@@ -18,15 +18,15 @@
         margin-top: 100px;
         height: inherit;
         background: rgba(235, 229, 189, 1);
-        z-index: 2;
+        z-index: 1;
         &:before {
             content: '';
             position: absolute;
             display: block;
             width: 100%;
-            height: inherit;
+            height: 816px;
             @include image("header__bg.png", cover);
-            z-index: 1;
+            z-index: 2;
         }
     }
 

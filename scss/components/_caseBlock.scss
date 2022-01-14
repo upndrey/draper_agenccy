@@ -1,0 +1,53 @@
+.caseBlock {
+    width: 510px;
+    display: flex;
+    flex-direction: column;
+
+    &>.ulTitle {
+        font-size: 28px;
+        line-height: 35px;
+        color: #000;
+        margin-bottom: 38px;
+        text-transform: uppercase;
+        @include fw(700);
+    }
+
+    &>ul {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 28px;
+        max-width: 378px;
+        li {
+            position: relative;
+            left: 24px;
+            width: fit-content;
+            text-transform: uppercase;
+            font-size: 28px;
+            line-height: 36px;
+            margin-bottom: 36.4px;
+            @include fw(400);
+            &:before {
+                content: '';
+                position: absolute;
+                left: -26px;
+                top: 5px;
+                width: 18px;
+                height: 24px;
+                @include image("klatz__li.svg");
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -6px;
+                left: -120px;
+                width: calc(100% + 120px);
+                border-bottom: 3px dashed #574441;
+            }
+        }
+    }
+
+    .btn_action {
+        width: 298px;
+        height: 45px;
+    }
+}

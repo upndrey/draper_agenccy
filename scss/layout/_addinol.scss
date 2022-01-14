@@ -1,0 +1,96 @@
+.addinol {
+    padding-top: 132px;
+    padding-bottom: 300px;
+    &__wrapper {
+        overflow: hidden;
+        background: rgba(211, 179, 134, .5);
+    }
+
+    &__title {
+        font-family: 'Docker';
+        text-transform: uppercase;
+        font-size: 120px;
+        line-height: 120px;
+        letter-spacing: 0.05em;
+        color: rgba(22, 16, 8, 1);
+    }
+    &__subtitle {
+        font-size: 38px;
+        line-height: 37px;
+        color: rgba(0, 0, 0, 0.5);
+        @include fw(400);
+        margin-bottom: 60px;
+    }
+    &>div {
+        clear: both;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        &>img {
+            position: absolute;
+            left: -100px;
+            top: 0;
+            padding: 1px;
+            border: 6px dashed #BF4D11;
+        }
+    }
+
+    &__right {
+        &>.ulTitle {
+            margin-bottom: 27px;
+        }
+        &>ul {
+            max-width: 484px;
+            &>li {
+                width: 100%;
+                left: 26px;
+                &:before {
+                    @include image("addinol__li.svg");
+                }
+                &:after {
+                    left: 0;
+                    width: calc(100% + 120px);
+                }
+                &:nth-child(1) {
+                    &:after {
+                        bottom: -2px;
+                    }
+                }
+
+                &:nth-child(2) {
+                    &:after {
+                        bottom: -4px;
+                    }
+                }
+
+                &:nth-child(3) {
+                    &:after {
+                        bottom: -1px;
+                    }
+                }
+
+                &:nth-child(4) {
+                    &:after {
+                        bottom: -4px;
+                    }
+                }
+
+                &:nth-child(5) {
+                    &:after {
+                        bottom: -1px;
+                    }
+                }
+
+                &:nth-child(6) {
+                    &:after {
+                        bottom: -2px;
+                    }
+                }
+            }
+        }
+
+        .btn_action {
+            left: 9px;
+        }
+    }
+}

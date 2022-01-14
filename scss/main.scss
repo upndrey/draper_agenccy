@@ -17,20 +17,24 @@
   'base/typography',
   'base/helpers';
 
-// 4. Layout-related sections
-@import 
-  'layout/nav',
-  'layout/header',
-  'layout/services',
-  'layout/footer';
-
-// 5. Components
+// 4. Components
 @import
   'components/wrapper',
   'components/container',
   'components/title',
   'components/popup',
+  'components/caseBlock',
   'components/button';
+  
+// 5. Layout-related sections
+@import 
+  'layout/nav',
+  'layout/header',
+  'layout/services',
+  'layout/klatz',
+  'layout/addinol',
+  'layout/footer';
+
 
 // 6. Page-specific styles
 @import
