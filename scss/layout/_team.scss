@@ -128,14 +128,7 @@
         position: absolute;
         bottom: 0;
         display: flex;
-        &>div {
-            width: 366px;
-            height: 161px;
-            opacity: .75;
-            @include image("team__bottom.svg", contain);
-            &:nth-child(2n) {
-                background-position: -50px center;
-            }
-        }
+        @include image("team__bottom.svg", auto);
+        background-position-y: 98px;
     }
 }

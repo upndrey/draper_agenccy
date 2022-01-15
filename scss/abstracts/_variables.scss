@@ -16,7 +16,7 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 
 
 /// xl container
-$width_xl: 1250px !default;
+$width_xl: calc(1250px + 10px) !default;
 /// lg breakpoint
 $breakpoint_lg: 992px !default;
 /// lg container
