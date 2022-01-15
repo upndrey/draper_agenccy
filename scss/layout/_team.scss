@@ -134,10 +134,14 @@
 
     &__bottom {
         width: 100%;
+        max-width: 1300px;
         height: 161px;
+        margin: auto;
         overflow: hidden;
         position: absolute;
         bottom: 0;
+        left: 0;
+        right: 0;
         display: flex;
         @include image("team__bottom.svg", auto);
         background-position-y: 98px;
