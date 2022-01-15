@@ -1,18 +1,58 @@
 .addinol {
     &__wrapper {
+        position: relative;
         padding-top: 132px;
         padding-bottom: 307px;
         overflow: hidden;
         background: rgba(211, 179, 134, .5);
     }
 
+    &__oil {
+        position: absolute;
+        right: -205px;
+        top: 0;
+        width: 437px;
+        height: 305px;
+        border-left: 10px solid #D4936A;
+        border-bottom: 10px solid #D4936A;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 95px;
+            bottom: -75px;
+            width: 170px;
+            height: 253px;
+            @include image("addinol__oil.png");
+        }
+    }
+
+    &__girl {
+        position: absolute;
+        left: 0;
+        bottom: -60px;
+        width: 320px;
+        height: 438px;
+
+        @include image("addinol__girl.png");
+    }
+
     &__title {
+        position: relative;
         font-family: 'Docker';
         text-transform: uppercase;
         font-size: 120px;
         line-height: 120px;
         letter-spacing: 0.05em;
         color: rgba(22, 16, 8, 1);
+        &:before {
+            content: '';
+            position: absolute;
+            left: -61px;
+            top: -13px;
+            width: 49px;
+            height: 66px;
+            @include image("addinol__drops.svg");
+        }
     }
     &__subtitle {
         font-size: 38px;

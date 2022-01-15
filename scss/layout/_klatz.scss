@@ -34,7 +34,6 @@
     }
 
     &__left {
-
         &>.title {
             font-size: 50px;
             line-height: 65px;
@@ -85,10 +84,21 @@
     }
 
     &__logo {
+        position: relative;
         width: 298px;
         height: 53px;
         margin-bottom: 36px;
         @include image("klatz__logo.svg");
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -170px;
+            width: 152px;
+            height: 246px;
+            @include image("klatz__icon.svg");
+        }
     }
 
 }
