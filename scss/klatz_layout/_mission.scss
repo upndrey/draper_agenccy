@@ -1,0 +1,53 @@
+.mission {
+    position: relative;
+    z-index: 3;
+    &__wrapper {
+        position: relative;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background: #FA70CA;
+        &:before {
+            content: '';
+            width: 730px;
+            height: 752px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+
+            @include image("mission__vector.svg");
+        }
+
+        &:after {
+            content: '';
+            width: 518px;
+            height: 806px;
+            position: absolute;
+            right: 0;
+            top: 122px;
+            z-index: 2;
+
+            @include image("mission__img.png");
+        }
+    }
+
+
+    p {
+        font-size: 28px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #3D2308;
+        margin-bottom: 20px;
+
+        @include fw(700);
+    }
+
+    h2 {
+        font-size: 90px;
+        line-height: 114px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+        @include fw(700);
+    }
+}
