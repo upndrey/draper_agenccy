@@ -1,0 +1,43 @@
+.lovely {
+
+    &__wrapper {
+        overflow: hidden;
+        position: relative;
+        padding-top: 68px;
+        padding-bottom: 69px;
+        background: #D36654;
+    }
+
+    &:before {
+        content: '';
+        width: 478px;
+        height: 486px;
+        position: absolute;
+        top: 64px;
+        right: -25px;
+
+        @include image("lovely__vector.svg");
+    }
+
+    &:after{ 
+        content: '';
+        width: 455px;
+        height: 430px;
+        position: absolute;
+        top: 65px;
+        right: 0;
+
+        @include image("lovely__img.png");
+    }
+
+    p {
+        max-width: 934px;
+        font-size: 50px;
+        line-height: 63px;
+        color: #fff;
+        @include fw(700);
+        &:first-child {
+            margin-bottom: 50px;
+        }
+    }
+}
