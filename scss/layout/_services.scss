@@ -78,7 +78,7 @@
 
             &__block {
                 width: 100%;
-                padding: 14px 22px;
+                padding: 15px 20px;
                 border: 2.2px solid transparent;
             }
 
@@ -86,7 +86,7 @@
                 @include fw(700);
                 font-size: 28px;
                 line-height: 130%;
-                margin-bottom: 5px;
+                margin-bottom: 4px;
             }
 
             &__p {
@@ -147,6 +147,7 @@
             display: none;
             flex-direction: column;
             width: 100%;
+            min-height: 671px;
             padding: 28px 40px 48px 40px;
             background: rgba(255, 255, 255, 0.8);
             border: 3px solid #000000;
@@ -179,8 +180,12 @@
 
             &>.text {
                 display: flex;
-                margin-bottom: 48px;
+                justify-content: space-between;
+                width: 100%;
+                min-height: 435px;
+                margin-bottom: 25px;
                 ul {
+                    max-width: 275px;
                     margin: 0;
                     display: flex;
                     flex-direction: column;
@@ -198,8 +203,11 @@
                             line-height: 21px;
                         }
                     }
-
                     &:first-child {
+                        margin-right: 10px;
+                    }
+
+                    &:last-child {
                         max-width: 270px;
                     }
                 }
