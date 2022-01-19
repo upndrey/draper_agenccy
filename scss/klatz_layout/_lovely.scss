@@ -4,7 +4,7 @@
         overflow: hidden;
         position: relative;
         padding-top: 68px;
-        padding-bottom: 69px;
+        padding-bottom: 66px;
         background: #D36654;
     }
 
@@ -13,8 +13,8 @@
         width: 478px;
         height: 486px;
         position: absolute;
-        top: 64px;
-        right: -25px;
+        top: 75px;
+        right: -42px;
 
         @include image("lovely__vector.svg");
     }
@@ -37,7 +37,7 @@
         color: #fff;
         @include fw(700);
         &:first-child {
-            margin-bottom: 50px;
+            margin-bottom: 65px;
         }
     }
 }
