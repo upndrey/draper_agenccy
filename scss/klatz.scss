@@ -24,6 +24,7 @@
   'components/title',
   'components/popup',
   'components/caseBlock',
+  'components/scrollerBlock',
   'components/button';
 
 // 5. Layout-related sections
@@ -35,8 +36,17 @@
   'klatz_layout/begin',
   'klatz_layout/mission',
   'klatz_layout/way',
+  'klatz_layout/preferences',
+  'klatz_layout/perception',
+  'klatz_layout/dig',
+  'klatz_layout/analysisResult',
+  'klatz_layout/parallel',
+  'klatz_layout/count',
+  'klatz_layout/interview',
+  'klatz_layout/persons',
+  'klatz_layout/cjm',
+  'klatz_layout/inside',
   'layout/footer';
-
 
 // 6. Page-specific styles
 @import

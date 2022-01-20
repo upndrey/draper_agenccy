@@ -1,0 +1,124 @@
+.preferences {
+    position: relative;
+    z-index: 2;
+
+    &__wrapper {
+        padding-top: 120px;
+        padding-bottom: 206px;
+        position: relative;
+        background: #6050CE;
+        overflow: hidden;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 1083px;
+            z-index: 1;
+
+            @include image("preferences__bg.png", cover); // change to jpg later
+        }
+    }
+
+    h2 {
+        max-width: 616px;
+        width: 100%;
+        text-align: left;
+        color: #FFDE68;
+        font-size: 50px;
+        line-height: 140%;
+        margin-bottom: 60px;
+        position: relative;
+        z-index: 8;
+    }
+
+    &__block {
+        position: relative;
+        z-index: 8;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        &>div {
+            max-width: 616px;
+            width: 100%;
+            max-height: 571px;
+            height: 100%;
+            overflow: hidden;
+            background: #FFFFFF;
+            border: 2px solid #001429;
+            box-sizing: border-box;
+            box-shadow: -4px 6px 0px #001429;
+            border-radius: 24px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &>.title {
+                font-size: 40px;
+                line-height: 104px;
+                text-align: center;
+                color: #001429;
+    
+                @include fw(700);
+            }
+
+            &>img {
+                width: fit-content;
+            }
+        }
+    }
+
+    &__leftImages {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        bottom: 0;
+        div {
+            &:nth-child(1) {
+                content: '';
+                position: absolute;
+                left: -276px;
+                bottom: 33px;
+                width: 252px;
+                height: 405px;
+
+                @include image("preferences__blue.svg");
+            }
+            &:nth-child(2) {
+                content: '';
+                position: absolute;
+                left: -100px;
+                bottom: 300px;
+                width: 243px;
+                height: 258px;
+
+                @include image("preferences__yellow.svg");
+            }
+        }
+    }
+
+    &__rightImages {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 0;
+        div {
+            &:nth-child(1) {
+                content: '';
+                position: absolute;
+                top: 127px;
+                right: -177px;
+                width: 151px;
+                height: 151px;
+
+                @include image("way__evaluation_figure.svg");
+            }
+        }
+    }
+}

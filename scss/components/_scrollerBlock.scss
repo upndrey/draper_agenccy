@@ -1,0 +1,19 @@
+.scrollerBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .vertical {
+        position: absolute;
+        left: -272px;
+        top: 202px;
+        font-size: 120px;
+        line-height: 140%;
+        color: #D0D0D0;
+        opacity: 0.5;
+        transform: rotate(-90deg);
+        @include fw(700);
+    }
+    .scroller {
+        align-self: flex-end;
+    }
+}

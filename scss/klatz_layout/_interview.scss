@@ -1,0 +1,19 @@
+.interview {
+    display: flex;
+    flex-direction: column;
+    &__wrapper {
+        padding-top: 231px;
+        padding-bottom: 110px;
+        background: #fff;
+    }
+
+    p {
+        align-self: flex-end;
+        max-width: 1040px;  
+        font-size: 50px;
+        line-height: 140%;
+        color: #000000;
+
+        @include fw(700);
+    }
+}

@@ -1,0 +1,28 @@
+.persons {
+    &__wrapper {
+        padding-top: 114px;
+        padding-bottom: 195px;
+        background: #E7E7E7;
+    }
+
+    .title {
+        margin-bottom: 36px;
+        h2 {
+            font-size: 50px;
+            line-height: 140%;
+            text-align: left;
+            color: #0B80BD;
+            margin-bottom: 0;
+
+            @include fw(700);
+        }
+
+        p {
+            color: #747474;
+            font-size: 28px;
+            line-height: 39px;
+
+            @include fw(700);
+        }
+    }
+}

@@ -1,0 +1,86 @@
+.analysisResult {
+    display: flex;
+    justify-content: center;
+    &__wrapper {
+        padding-top: 170px;
+        padding-bottom: 170px;
+        background: #208D66;
+        height: 1200px;
+        box-sizing: border-box;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 170px;
+            width: 860px;
+            height: 860px;
+            margin: auto;
+
+            @include image("analysisResult__logo.svg");
+        }
+        
+        h2 {
+            color: #fff;
+            width: fit-content;
+            margin: auto;
+            text-align: center;
+            font-size: 70px;
+            line-height: 130%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @include fw(700);
+
+            &:after {
+                content: '';
+                width: 100%;
+                max-width: 828px;
+                height: 5px;
+                border-radius: 15px;
+                background: #fff;
+                margin-top: 25px;
+                margin-bottom: 104px;
+            }
+        }
+    }
+
+    ul {
+        max-width: 510px;
+        li {
+            position: relative;
+            left: 47px;
+            font-size: 38px;
+            line-height: 140%;
+            color: #F9D78A;
+
+            @include fw(700);
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+            span {
+                width: 100%;
+                display: block;
+                color: #fff;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                left: -47px;
+                top: 10px;
+                width: 27px;
+                height: 27px;
+                border-radius: 50%;
+                background: rgba(255, 201, 199, 0.75);
+            }
+        }
+    }
+}
