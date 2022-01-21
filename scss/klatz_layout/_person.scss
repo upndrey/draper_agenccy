@@ -1,0 +1,174 @@
+.person {
+    position: relative;
+    &__wrapper {
+        position: relative;
+        overflow: hidden;
+        background: #B5E7DA;
+        padding-top: 191px;
+        padding-bottom: 549px;
+
+    }
+    
+    &:before {
+        content: '';
+        position: absolute;
+        top: 60px;
+        left: -50px;
+        margin: auto;
+        width: 1415px;
+        height: 600px;
+        z-index: 1;
+
+        @include image("person__bg.svg", cover);
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 228px;
+        left: -40px;
+        width: 1415px;
+        height: 600px;
+        z-index: 1;
+
+        @include image("person__bg.svg", cover);
+    }
+    
+    &__title {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 50px;
+        .inst {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 156px;
+            height: 156px;
+
+            opacity: 0.9;
+            background: #FFBB33;
+            border: 4px solid #001D3D;
+            box-sizing: border-box;
+            box-shadow: -4px 4px 0px #001D3D;
+            border-radius: 32px;
+
+            &:before {
+                content: '';
+                position: relative;
+                z-index: 2;
+                width: 122px;
+                height: 121px;
+
+                @include image("person__inst.svg");
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: -85px;
+                right: -65px;
+                width: 81px;
+                height: 81px;
+
+                @include image("person__like.svg");
+            }
+        }
+
+        h2 {
+            max-width: 827px;
+            margin-left: 127px;
+            font-size: 50px;
+            line-height: 63px;
+            color: #02B784;
+
+            @include fw(700);
+        }
+    }
+
+    &__content {
+        z-index: 2;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        &:before {
+            content: '';
+            width: 249px;
+            height: 273px;
+            position: absolute;
+            left: -130px;
+            bottom: -15px;
+
+            @include image("person__people.png");
+        }
+
+        &:after {
+            content: '';
+            width: 620px;
+            height: 422px;
+            position: absolute;
+            right: -119px;
+            bottom: -284px;
+
+            @include image("person__woman.png");
+        }
+    }
+
+    &__left {
+        width: 677px;
+        height: 570px;
+        position: relative;
+        border: 10px solid #FFFFFF;
+        img {
+            position: relative;
+            display: block;
+            left: 92px;
+            top: 67px;
+
+            width: 572px;
+            height: 574px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: 65px;
+            top: 41px;
+            width: 625px;
+            height: 625px;
+
+            @include image("person__border.png");   
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: -151px;
+            top: 83px;
+            width: 207px;
+            height: 37px;
+
+            transform: rotate(-90deg);
+
+            @include image("klatz__logo.svg");
+        }
+    }
+
+    .btn_action {
+        width: 309px;
+        height: 57px;
+        margin-left: 136px;
+        background: #F8BF44;
+        border: 0;
+        box-sizing: border-box;
+        border-radius: 20px;
+
+        font-size: 22px;
+        line-height: 16px;
+        text-align: center;
+        color: #001429;
+
+        @include fw(700);
+    }
+}

@@ -1,0 +1,245 @@
+.taste {
+    &__wrapper {
+        z-index: 2;
+        position: relative;
+        overflow: hidden;
+        padding-top: 230px;
+        padding-bottom: 210px;
+        background: rgba(209, 199, 255, 0.8);
+
+        &:before {
+            z-index: 1;
+            position: absolute;
+            top: 0;
+
+            @include image("taste__bg.png", cover);
+        }
+
+        &:after {
+            z-index: 1;
+            position: absolute;
+            bottom: 374px;
+
+            @include image("taste__bg.png", cover);
+        }
+    }
+
+    &>div {
+        z-index: 3;
+    }
+
+    &__title {
+        margin-bottom: 125px;
+        h2 {
+            position: relative;
+            font-size: 50px;
+            line-height: 63px;
+            text-align: center;
+            color: #070707;
+            margin-bottom: 50px;
+
+            @include fw(700);
+
+            span {
+                color: #7b61ff;
+                background: #FFFFFF;
+                border-radius: 21px;
+                padding: 0 5px;
+            }
+
+            div {
+                width: 224px;
+                height: 50px;
+                margin: auto;
+                display: flex;
+                position: absolute;
+                top: -50px;
+                left: 0;
+                right: 0;
+
+                div {
+                    position: relative;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background: rgba(171, 101, 156, 0.2);
+                    &:nth-child(2) {
+                        margin: 0 37px;
+                    }
+                }
+            }
+        }
+
+        .link {
+            margin-bottom: 30px !important;
+        }
+
+        .text {
+            max-width: 828px;
+            margin: auto;
+            margin-bottom: 30px;
+            font-size: 28px;
+            line-height: 35px;
+            text-align: center;
+            color: #B89136;
+
+            @include fw(700);
+        }
+
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+
+    .link {
+        position: relative;
+        margin: auto;
+        display: block;
+        width: fit-content;
+
+        font-size: 32px;
+        line-height: 41px;
+        text-align: center;
+        color: #5B5454;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #5B5454;
+
+        @include fw(700);
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        span {
+            position: relative;
+            color: #e4b84f;
+            background: #FFFFFF;
+            border-radius: 15px;
+            padding: 0 10px;
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -8px;
+                width: 100%;
+                height: 2px;
+                background: #e4b84f;
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 7px;
+            left: -36px;
+            width: 26px;
+            height: 25px;
+
+            @include image("taste__list1.svg");
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 7px;
+            right: -36px;
+            width: 26px;
+            height: 25px;
+            transform: rotate(90deg);
+
+            @include image("taste__list1.svg");
+        }
+    }
+
+    &__videos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &>div {
+            &:not(:last-child) {
+                margin-bottom: 136px;
+            }
+            
+        &.glamour {
+            .link {
+                span {
+                    color: #e4544f;
+                    &:after {
+                        background: #e4544f;
+                    }
+                }
+                
+                &:before,
+                &:after {
+                    @include image("taste__list2.svg");
+                }
+            }
+        }
+
+        &.kids {
+            .link {
+                span {
+                    color: #bf4d11;
+                    &:after {
+                        background: #bf4d11;
+                    }
+                }
+
+                &:before,
+                &:after {
+                    @include image("taste__list3.svg");
+                }
+            }
+        }
+        }
+
+
+        .title {
+            margin-bottom: 40px;
+            font-size: 32px;
+            line-height: 41px;
+            text-align: center;
+            color: #5B5654;
+            
+            @include fw(700);
+        }
+
+        .video {
+            width: 828px;
+            max-width: 100%;
+            height: 464px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 32px;
+            box-sizing: border-box;
+            border: 10px solid #FFFFFF;
+
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }
+            
+            video {
+                width: 764px;
+                height: 404px;
+                background: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .btn_action {
+        margin: auto;
+        margin-top: 56px;
+        width: 365px;
+        height: 44px;
+
+        font-size: 20px;
+        line-height: 16px;
+        text-align: center;
+        color: #001429;
+        border: 0;
+    }
+}

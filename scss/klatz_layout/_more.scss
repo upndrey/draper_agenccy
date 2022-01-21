@@ -1,0 +1,106 @@
+.more {
+    position: relative;
+    &__wrapper {
+        overflow: hidden;
+        padding-top: 165px;
+        padding-bottom: 258px;
+        background: #026986;
+    }
+
+    &:before {
+        content: '';
+        width: 594px;
+        height: 754px;
+        position: absolute;
+        bottom: -230px;
+        left: -393px;
+
+        @include image("more__money.png");
+    }
+
+    &:after {
+        content: '';
+        width: 656px;
+        height: 1016px;
+
+        position: absolute;
+        top: 20px;
+        left: 700px;
+
+        @include image("more__tv.png");
+    }
+
+    h2 {
+        font-size: 80px;
+        line-height: 101px;
+        color: #FFFFFF;
+
+        @include fw(700);
+
+        width: fit-content;
+        border: 10px solid #fff;
+        border-left: none;
+        padding: 44px 10px 44px 110px;
+
+        position: relative;
+        left: -94px;
+        margin-bottom: 135px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+
+        li {
+            position: relative;
+            font-size: 46px;
+            line-height: 58px;
+
+            @include fw(700);
+
+            &:before {
+                content: '';
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+
+                position: absolute;
+                top: 8px;
+                left: -62px;
+            }
+
+            &:nth-child(1) {
+                left: 100px;
+                color: #72BB54;
+                margin-bottom: 147px;
+                max-width: 510px;
+
+                &:before {
+                    background: #FEC700;
+                }
+            }
+
+            &:nth-child(2) {
+                left: 300px;
+                color: #CA8D47;
+                margin-bottom: 146px;
+                max-width: 403px;
+
+                &:before {
+                    background: #61C9F3;
+                }
+            }
+
+            &:nth-child(3) {
+                left: 500px;
+                color: #C4C4C4;
+                max-width: 544px;
+
+                &:before {
+                    background: #FFC9C7;
+                }
+            }
+        }
+    }
+}
