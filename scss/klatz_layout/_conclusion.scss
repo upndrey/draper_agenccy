@@ -1,0 +1,217 @@
+.conclusion {
+    position: relative;
+    &__wrapper {
+        padding-top: 120px;
+        padding-bottom: 180px;
+        background: #F7D1DD;
+        overflow: hidden;
+    }
+
+    h2 {
+        max-width: 519px;
+        font-size: 80px;
+        line-height: 120%;
+        color: rgba(133, 81, 196, 0.8);
+        margin-bottom: 73px;
+
+        @include fw(700);
+    }
+
+    &__images {
+        width: 500px;
+        position: absolute;
+        top: 0;
+        right: 100px;
+        div {
+            position: absolute;
+            &:nth-child(1) {
+                position: absolute;
+                left: 176px;
+                top: 50px;
+                width: 138px;
+                height: 146px;
+                @include image("conclusion__left_yellow.svg");
+            }
+            &:nth-child(2) {
+                position: absolute;
+                left: 176px;
+                top: 250px;
+                width: 120px;
+                height: 143px;
+                @include image("conclusion__green.svg");
+            }
+            &:nth-child(3) {
+                position: absolute;
+                left: -50px;
+                top: 175px;
+                width: 151px;
+                height: 151px;
+                @include image("way__evaluation_figure.svg");
+            }
+            &:nth-child(4) {
+                position: absolute;
+                left: 350px;
+                top: 150px;
+                width: 204px;
+                height: 204px;
+                @include image("conclusion__face.png");
+            }
+            &:nth-child(5) {
+                position: absolute;
+                left: 400px;
+                top: -100px;
+                width: 145px;
+                height: 145px;
+                border-radius: 50%;
+                background: #3D2308;
+            }
+        }
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__left {
+        position: relative;
+        bottom: 40px;
+        z-index: 2;
+        width: 100%;
+        max-width: 487px;
+        height: 698px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 126px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -63px;
+            left: -85px;
+
+            width: 606px;
+            height: 854px;
+
+            z-index: 1;
+            @include image("conclusion__left_bg.jpg");
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 487px;
+            height: 698px;
+
+            z-index: 2;
+            border: 10px solid #FFFFFF;
+        }
+
+        .text {
+            z-index: 2;
+            font-size: 28px;
+            line-height: 120%;
+            color: #000000;
+            text-transform: uppercase;
+            text-align: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #F9D78A;
+            opacity: 0.8;
+            height: 73px;
+
+            @include fw(700);
+
+            &:nth-child(1) {
+                width: 237px;
+                margin-bottom: 99px;
+            }
+
+            &:nth-child(2) {
+                width: 283px;
+                margin-bottom: 73px;
+            }
+
+            &:nth-child(3) {
+                width: 397px;
+                height: 96px;   
+            }
+        }
+
+        .images {
+            z-index: 3;
+            position: absolute;
+
+            div {
+                &:nth-child(1) {
+                    position: absolute;
+                    left: -293px;
+                    top: -456px;
+                    width: 138px;
+                    height: 146px;
+                    @include image("conclusion__left_yellow.svg");
+                }
+                &:nth-child(2) {
+                    position: absolute;
+                    left: -87px;
+                    top: -117px;
+                    width: 67px;
+                    height: 71px;
+                    @include image("conclusion__left_orange.svg");
+                }
+                &:nth-child(3) {
+                    position: absolute;
+                    right: -224px;
+                    bottom: -358px;
+                    width: 82px;
+                    height: 87px;
+                    @include image("conclusion__left_green.svg");
+                }
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+
+        ul {
+            margin: 0;
+            &:first-child {
+                max-width: 510px;
+            }
+
+            &:last-child {
+                max-width: 616px;
+            }
+
+            li {
+                position: relative;
+                margin-bottom: 36px;
+
+                font-size: 28px;
+                line-height: 120%;
+                color: rgba(0, 0, 0, 0.75);
+
+                @include fw(700);
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    left: -50px;
+                    top: 6px;
+                    width: 34px;
+                    height: 34px;
+                    @include image("conclusion__li.svg");
+                }
+            }
+        }
+    }
+}
