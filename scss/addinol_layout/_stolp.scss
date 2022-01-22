@@ -1,0 +1,59 @@
+.stolp {
+    &__wrapper {
+        padding-top: 120px;
+        padding-bottom: 226px;
+        background: #51A9AE;
+    }
+
+    p {
+        font-size: 50px;
+        line-height: 63px;
+        color: #F1F58F;
+
+        @include fw(700);
+        margin-bottom: 50px;
+    }
+
+    ol {
+        li {
+            font-size: 28px;
+            line-height: 180%;
+            color: #FFFFFF;
+
+            @include fw(700);
+            span {
+                padding: 0 5px;
+            }
+
+            &:nth-child(1) {
+                span {
+                    background: #96babc;
+                }
+            }
+
+            &:nth-child(2) {
+                span {
+                    background: #97d5d2;
+                }
+            }
+
+            &:nth-child(3) {
+                span {
+                    background: #a6c4b4;
+                }
+            }
+
+            &:nth-child(4) {
+                span {
+                    background: #439ebe;
+                }
+            }
+
+            &:nth-child(5) {
+                span {
+                    background: #49989d;
+                }
+            }
+        }
+    }
+}

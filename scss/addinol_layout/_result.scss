@@ -1,0 +1,42 @@
+.result {
+    &__wrapper {
+        padding-top: 120px;
+        padding-bottom: 221px;
+        background: #e9e1ca;
+    }
+
+    &>p {
+        font-size: 50px;
+        line-height: 63px;
+        color: #000000;
+
+        @include fw(700);
+        margin-bottom: 24px;
+    }
+
+    &__content {
+        position: relative;
+        right: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        img {
+            margin-right: 78px;
+        }
+
+        div {
+            max-width: 616px;
+            p {
+                font-size: 28px;
+                line-height: 140%;
+                color: #000000;
+
+                @include fw(700);
+                &:first-child {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}

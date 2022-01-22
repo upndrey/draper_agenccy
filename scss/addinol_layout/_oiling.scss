@@ -1,0 +1,49 @@
+.oiling {
+    margin-bottom: 51px;
+    &__wrapper {
+        position: relative;
+        padding-top: 151px;
+        padding-bottom: 100px;
+        @include image("oiling__bg.jpg", cover);
+ 
+        .oiling__girl {
+            position: absolute;
+            left: 0;
+            top: -330px;
+            width: 320px;
+            height: 438px;
+            z-index: 5;
+    
+            @include image("addinol__girl.png");
+        }
+
+        &>.addWrapper {
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+
+    p {
+        max-width: 1040px;
+        position: relative;
+        font-size: 38px;
+        line-height: 140%;
+        color: #FFFFFF;
+
+        @include fw(700);
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            width: 418px;
+            height: 440px;
+            right: -500px;
+            @include image("oiling__img.png");
+        }
+    }
+
+
+    
+
+}

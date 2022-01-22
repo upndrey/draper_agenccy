@@ -1,0 +1,44 @@
+.public {
+    &__wrapper {
+        padding-top: 120px;
+        padding-bottom: 191px;
+        background: #afd2e9;
+    }
+
+    &>p {
+        font-size: 50px;
+        line-height: 63px;
+        text-align: center;
+        color: #000000;
+
+        @include fw(700);
+        margin-bottom: 80px;
+    }
+
+    ul {
+        max-width: 1013px;
+        margin: auto;
+        li {
+            position: relative;
+            font-size: 28px;
+            line-height: 35px;
+            color: #3D3D3D;
+
+            @include fw(700);
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: -30px;
+                top: 10px;
+                width: 25px;
+                height: 13px;
+                
+                @include image("public__arr.svg");
+            }
+        }
+    }
+}

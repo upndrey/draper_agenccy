@@ -1,0 +1,67 @@
+.opponents {
+    display: flex;
+    justify-content: flex-end;
+    &__wrapper {
+        padding-top: 68px;
+        padding-bottom: 126px;
+        background: #e9d9c3;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        max-width: 510px;
+        margin-right: 20px;
+        margin-top: 20px;
+
+        p {
+            font-size: 38px;
+            line-height: 48px;
+            color: #3D2308;
+
+            @include fw(700);
+
+            &:first-child {
+                margin-bottom: 38px;
+                max-width: 510px;
+            }
+
+            &:nth-child(2) {
+                margin-bottom: 20px;
+                max-width: 424px;
+            }
+        }
+
+        &>div {
+            width: 412px;
+            height: 450px;
+        }
+    }
+
+    &__shadowBlock {
+        width: 510px;
+        height: 528px;
+        background: #FFFFFF;
+        border: 2px solid #001429;
+        box-sizing: border-box;
+        box-shadow: -4px 6px 0px #001429;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        p {
+            font-size: 32px;
+            line-height: 41px;
+            color: #3D2308;
+
+            @include fw(700);
+
+            margin-bottom: 16px;
+            margin-left: 15px;
+
+            align-self: start;
+        }
+    }
+}

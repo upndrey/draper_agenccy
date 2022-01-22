@@ -1,0 +1,28 @@
+.mediaplan {
+    &__wrapper {
+        padding-top: 120px;
+        padding-bottom: 107px;
+    }
+
+    p {
+        font-size: 50px;
+        line-height: 63px;
+        color: #000000;
+
+        @include fw(700);
+        margin-bottom: 50px;
+    }
+
+    div {
+        width: 100%;
+        background: #FFFFFF;
+        border: 2px solid #001429;
+        box-sizing: border-box;
+        box-shadow: -4px 6px 0px #001429;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 20px 23px 20px;
+    }
+}

@@ -1,0 +1,56 @@
+.portrait {
+    &__wrapper {
+        padding-top: 120px;
+        padding-bottom: 150px;
+        background: #20A18F;
+    }
+
+    p {
+        max-width: 1040px;
+        margin: auto;
+        margin-bottom: 50px;
+        font-size: 50px;
+        line-height: 63px;
+        color: #FFFFFF;
+
+        @include fw(700);
+    }
+
+    div {
+        max-width: 1040px;
+        margin: auto;
+        display: flex;
+        justify-content: flex-end;
+
+        ul {
+            max-width: 473px;
+
+            &:first-child {
+                margin-right: 57px;
+            }
+            li {
+                position: relative;
+                font-size: 28px;
+                line-height: 130%;
+                color: #C4FFDB;
+
+                &:not(:last-child) {
+                    margin-bottom: 25px;
+                }
+
+                @include fw(700);
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 5px;
+                    left: -37px;
+                    width: 23px;
+                    height: 22px;
+
+                    @include image("portrait__list.svg");
+                }
+            }
+        }
+    }
+}

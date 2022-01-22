@@ -1,0 +1,27 @@
+.shop {
+    &__wrapper {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background: #F1F58F;
+    }
+
+    p {
+        font-size: 50px;
+        line-height: 63px;
+        text-transform: uppercase;
+        color: #000000;
+
+        @include fw(700);
+    }
+
+    a {
+        font-size: 38px;
+        line-height: 48px;
+        text-transform: uppercase;
+        color: #0bb1bc;
+
+        text-transform: none;
+
+        @include fw(700);
+    }
+}

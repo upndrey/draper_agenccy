@@ -1,0 +1,66 @@
+.brand {
+    &__wrapper {
+        padding-top: 120px;
+        padding-bottom: 300px;
+        background: rgba(211, 179, 134, 0.5);
+    }
+
+    h2 {
+        font-size: 50px;
+        line-height: 63px;
+        text-align: center;
+        color: #3D2308;
+
+        @include fw(700);
+        margin-bottom: 8px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        color: #3D2308;
+
+        @include fw(400);
+        margin-bottom: 80px;
+    }
+
+    div {
+        max-width: 1140px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        ul {
+            max-width: 400px;
+            li {
+                width: fit-content;
+                position: relative;
+                font-size: 28px;
+                line-height: 35.45px;
+                color: #714C27;
+                padding-bottom: 0;
+                text-decoration: underline;
+                text-decoration-style: dotted;
+                text-decoration-color: black;
+                
+
+                @include fw(700);
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0px;
+                    left: -50px;
+                    width: 33px;
+                    height: 33px;
+                    
+                    @include image("brand__star.svg");
+                }
+            }
+        }
+    }
+}

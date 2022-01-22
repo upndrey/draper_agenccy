@@ -1,0 +1,71 @@
+.three {
+    &__wrapper {
+        padding-top: 120px;
+        padding-bottom: 324px;
+        background: #5E4B56;
+    }
+
+    &>p {
+        font-size: 50px;
+        line-height: 63px;
+        color: #FFFFFF;
+
+        @include fw(700);
+        margin-bottom: 80px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+
+        &>div {
+            position: relative;
+            width: 100%;
+            max-width: 404px;
+            height: 248px;
+            background: rgba(164, 150, 158, 0.9);
+            box-shadow: -4px 4px 4px rgba(87, 68, 65, 0.25);
+            border-radius: 15px;
+            box-sizing: border-box;
+            padding: 35px 22px 35px 22px;
+
+            .title {
+                font-size: 28px;
+                line-height: 35px;
+                color: #FFFFFF;
+
+                @include fw(700);
+                width: fit-content;
+                position: relative;
+                margin-bottom: 28px;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 100%;
+                    height: 5px;
+
+                    @include image("three__underline.svg", cover);
+                }
+            }
+
+            .text {
+                font-size: 18px;
+                line-height: 23px;
+                color: #DFDFDF;
+
+                @include fw(700);
+            }
+
+            &:nth-child(2) {
+                top: 100px;
+            }
+
+            &:nth-child(3) {
+                top: 200px;
+            }
+        }
+    }
+}

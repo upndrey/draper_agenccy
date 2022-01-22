@@ -1,0 +1,15 @@
+.addinol__page {
+    z-index: 5;
+    position: relative;
+    padding-top: 232px;
+    &:before {
+        content: '';
+        width: 866px;
+        height: 866px;
+        position: absolute;
+        left: -93px;
+        bottom: 52px;
+
+        @include image("addinol__bg.png");
+    }
+}
