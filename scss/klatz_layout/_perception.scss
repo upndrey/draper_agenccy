@@ -61,5 +61,9 @@
         box-shadow: -4px 6px 0px #001429;
         border-radius: 24px;
         padding: 45px 9px;
+
+        &>img {
+            max-width: 100%;
+        }
     }
 }
