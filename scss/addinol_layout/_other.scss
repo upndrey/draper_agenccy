@@ -61,9 +61,11 @@
             }
 
             img {
+                position: relative;
+                right: 72px;
                 width: 219px;
                 height: 330px;
-                margin-right: 99px;
+                margin-right: 25px;
             }
 
             &>div {
@@ -86,7 +88,10 @@
                     margin-bottom: 43px;
                 }
 
-                .btn_alert {}
+                .btn_alert {
+                    width: 228px;
+                    height: 45px;
+                }
             }
         }
     }

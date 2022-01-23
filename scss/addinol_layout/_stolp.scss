@@ -4,15 +4,15 @@
     &__wrapper {
         overflow: hidden;
         padding-top: 120px;
-        padding-bottom: 226px;
+        padding-bottom: 200px;
         background: #51A9AE;
     }
 
     &:after {
         content: '';
         position: absolute;
-        right: -145px;
-        bottom: -244px;
+        right: -136px;
+        bottom: -216px;
         width: 391px;
         height: 335px;
 
@@ -25,7 +25,7 @@
         color: #F1F58F;
 
         @include fw(700);
-        margin-bottom: 50px;
+        margin-bottom: 58px;
     }
 
     ol {
@@ -33,6 +33,10 @@
             font-size: 28px;
             line-height: 180%;
             color: #FFFFFF;
+
+            &:last-child {
+                line-height: 150%;
+            }
 
             @include fw(700);
 

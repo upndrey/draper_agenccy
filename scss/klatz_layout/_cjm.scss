@@ -5,7 +5,7 @@
         position: relative;
         padding-top: 150px;
         padding-bottom: 180px;
-        height: 1720px;
+        height: 1700px;
         box-sizing: border-box;
         @include image("cjm__bg.jpg", cover);
         overflow: hidden;
@@ -16,7 +16,7 @@
             left: 0;
             top: 0;
             width: 100%;
-            height: 1720px;
+            height: 1700px;
             z-index: 1;
             background: rgba(255, 248, 204, .9);
         }

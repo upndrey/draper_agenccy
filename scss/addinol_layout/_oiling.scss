@@ -25,22 +25,26 @@
 
     p {
         max-width: 1040px;
+        margin-left: 100px;
         position: relative;
         font-size: 38px;
         line-height: 140%;
         color: #FFFFFF;
 
         @include fw(700);
-
-        &:after {
-            content: '';
-            position: absolute;
-            top: 0px;
-            width: 418px;
-            height: 440px;
-            right: -500px;
-            @include image("oiling__img.png");
+        &:first-child {
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0px;
+                width: 418px;
+                height: 440px;
+                right: -500px;
+                @include image("oiling__img.png");
+            }
+            margin-bottom: 15px;
         }
+        
     }
 
 

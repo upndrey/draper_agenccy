@@ -1,6 +1,6 @@
 .analysisResult {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     &__wrapper {
         padding-top: 170px;
         padding-bottom: 170px;
@@ -44,14 +44,14 @@
                 height: 5px;
                 border-radius: 15px;
                 background: #fff;
-                margin-top: 25px;
-                margin-bottom: 104px;
+                margin-top: 6px;
+                margin-bottom: 90px;
             }
         }
     }
 
     ul {
-        max-width: 510px;
+        max-width: 411px;
         li {
             position: relative;
             left: 47px;
@@ -62,7 +62,7 @@
             @include fw(700);
 
             &:not(:last-child) {
-                margin-bottom: 30px;
+                margin-bottom: 53px;
             }
             span {
                 width: 100%;
