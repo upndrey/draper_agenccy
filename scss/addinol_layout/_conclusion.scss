@@ -94,5 +94,15 @@
             color: #FE6600;
             @include fw(700);
         }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: -105px;
+            left: -375px;
+            width: 304px;
+            height: 304px;
+            @include image("conclusion__path.png");
+        }
     }
 }

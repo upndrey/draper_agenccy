@@ -1,8 +1,22 @@
 .stolp {
+    position: relative;
+
     &__wrapper {
+        overflow: hidden;
         padding-top: 120px;
         padding-bottom: 226px;
         background: #51A9AE;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: -145px;
+        bottom: -244px;
+        width: 391px;
+        height: 335px;
+
+        @include image("stolp__man.png");
     }
 
     p {
@@ -21,6 +35,7 @@
             color: #FFFFFF;
 
             @include fw(700);
+
             span {
                 padding: 0 5px;
             }

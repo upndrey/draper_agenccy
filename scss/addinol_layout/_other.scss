@@ -1,0 +1,144 @@
+.other {
+    &__wrapper {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background: #faddb9;
+    }
+
+    &>p {
+        font-size: 38px;
+        line-height: 48px;
+        text-align: center;
+        color: #A76A38;
+
+        @include fw(700);
+        margin-bottom: 40px;
+    }
+
+    &__cases {
+        background: #F3F3F3;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 86px;
+        box-sizing: border-box;
+        margin-bottom: 95px;
+
+        &>div {
+            position: relative;
+            width: 100%;
+            max-width: 1080px;
+            height: 371px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include image("other__cases_bg.jpg", cover);
+            border-radius: 8px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 44px;
+                left: -27px;
+                width: 250px;
+                height: 271px;
+
+                @include image("other__cases_left.png");
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 18px;
+                right: -65px;
+                width: 349px;
+                height: 333px;
+
+                @include image("other__cases_right.png");
+            }
+
+            img {
+                width: 219px;
+                height: 330px;
+                margin-right: 99px;
+            }
+
+            &>div {
+                .logo {
+                    width: 211px;
+                    height: 38px;
+                    margin-bottom: 20px;
+
+                    @include image("klatz__logo.svg");
+                }
+
+                p {
+                    font-size: 18px;
+                    line-height: 150%;
+                    text-transform: uppercase;
+                    color: #7B1887;
+
+                    @include fw(700);
+                    max-width: 228px;
+                    margin-bottom: 43px;
+                }
+
+                .btn_alert {}
+            }
+        }
+    }
+
+    .contacts_addinol {
+        position: relative;
+        max-width: inherit;
+        background: rgba(255, 236, 213, 0.75);
+        border-radius: 10px;
+        padding: 50px 106px;
+        box-sizing: border-box;
+        height: 630px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 182px;
+            bottom: -280px;
+            width: 409px;
+            height: 710px;
+            @include image("other__contacts_woman.png");
+            z-index: 1;
+        }
+
+        &>p {
+            max-width: 100%;
+            font-size: 38px;
+            line-height: 48px;
+            color: #5B5454;
+
+            @include fw(700);
+            margin-bottom: 55px;
+        }
+
+        form {
+            input[name=email] {
+                margin-bottom: 15px;
+            }
+
+            input[type=text] {
+                background: #FAFAFA;
+                border-radius: 15px;
+            }
+
+            .label {
+                margin-bottom: 13px;
+            }
+        }
+    }
+}
+
+.footer_addinol {
+    position: relative;
+    z-index: 2;
+}

@@ -1,20 +1,63 @@
 .opponents {
+    position: relative;
     display: flex;
     justify-content: flex-end;
+
     &__wrapper {
+        position: relative;
+        overflow: hidden;
         padding-top: 68px;
         padding-bottom: 126px;
         background: #e9d9c3;
+
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            width: 593px;
+            height: 462px;
+            z-index: 2;
+
+            @include image("opponents__man.png");
+        }
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: -350px;
+        top: -350px;
+        width: 376px;
+        height: 448px;
+        z-index: 1;
+
+        @include image("opponents__path.png");
     }
 
     &__content {
+        position: relative;
+        z-index: 2;
         display: flex;
         flex-direction: column;
         max-width: 510px;
         margin-right: 20px;
         margin-top: 20px;
 
+        &:before {
+            content: '';
+            position: absolute;
+            left: -308px;
+            top: 0px;
+            width: 277px;
+            height: 276px;
+
+            @include image("opponents__lines.svg");
+        }
+
         p {
+            position: relative;
             font-size: 38px;
             line-height: 48px;
             color: #3D2308;
@@ -24,6 +67,18 @@
             &:first-child {
                 margin-bottom: 38px;
                 max-width: 510px;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: -100px;
+                    bottom: -200px;
+                    width: 376px;
+                    height: 448px;
+                    opacity: 0.07;
+
+                    @include image("opponents__path.png");
+                }
             }
 
             &:nth-child(2) {
@@ -35,10 +90,34 @@
         &>div {
             width: 412px;
             height: 450px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: -450px;
+                bottom: -200px;
+                width: 376px;
+                height: 448px;
+
+                @include image("opponents__path.png");
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                right: -550px;
+                bottom: -100px;
+                width: 376px;
+                height: 448px;
+
+                @include image("opponents__path.png");
+            }
         }
     }
 
     &__shadowBlock {
+        position: relative;
+        z-index: 2;
         width: 510px;
         height: 528px;
         background: #FFFFFF;
@@ -50,7 +129,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
+
         p {
             font-size: 32px;
             line-height: 41px;

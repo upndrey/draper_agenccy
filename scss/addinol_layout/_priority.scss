@@ -1,8 +1,11 @@
 .priority {
+    position: relative;
+
     &__wrapper {
         padding-top: 120px;
         padding-bottom: 94px;
         background: #EDDEA4;
+        overflow: hidden;
     }
 
     &>p {
@@ -22,9 +25,43 @@
         }
     }
 
+    &:before {
+        content: '';
+        position: absolute;
+        left: -175px;
+        bottom: 0;
+        width: 196px;
+        height: 348px;
+
+        @include image("priority__vector2.svg");
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: -187px;
+        bottom: 341px;
+        width: 196px;
+        height: 347px;
+
+        @include image("priority__vector1.svg");
+    }
+
     &__reasons {
+        position: relative;
         display: flex;
         justify-content: space-between;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            left: 550px;
+            top: 100px;
+            width: 149px;
+            height: 442px;
+
+            @include image("priority__path.png");
+        }
 
         &>div {
             position: relative;
@@ -54,6 +91,7 @@
                 color: #5B5454;
 
                 @include fw(700);
+
                 &:not(:last-child) {
                     margin-bottom: 20px;
                 }

@@ -1,9 +1,25 @@
 .brand {
     &__wrapper {
+        position: relative;
+        overflow: hidden;
         padding-top: 120px;
         padding-bottom: 300px;
         background: rgba(211, 179, 134, 0.5);
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -236px;
+            margin: auto;
+            width: 568px;
+            height: 457px;
+
+            @include image("brand__car.png");
+        }
     }
+    
 
     h2 {
         font-size: 50px;

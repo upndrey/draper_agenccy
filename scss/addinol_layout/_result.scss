@@ -1,8 +1,21 @@
 .result {
+    position: relative;
     &__wrapper {
+        overflow: hidden;
         padding-top: 120px;
         padding-bottom: 221px;
         background: #e9e1ca;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -252px;
+        right: -500px;
+        width: 797px;
+        height: 357px;
+
+        @include image("result__car.png");
     }
 
     &>p {
@@ -16,7 +29,7 @@
 
     &__content {
         position: relative;
-        right: 100px;
+        right: 170px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
