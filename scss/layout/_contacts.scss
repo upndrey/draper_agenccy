@@ -21,6 +21,8 @@
     }
 
     form {
+        position: relative;
+        z-index: 3;
         display: flex;
         flex-direction: column;
         margin-top: 46px;
@@ -118,6 +120,7 @@
     }
 
     &__img {
+        z-index: 1;
         position: absolute;
         right: 0;
         bottom: 100px;

@@ -47,6 +47,9 @@
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: $breakpoint_lg) {
+            max-width: 900px;
+        }
         ul {
             max-width: 400px;
             li {

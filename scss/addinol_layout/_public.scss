@@ -44,6 +44,9 @@
         max-width: 1013px;
         margin: auto;
 
+        @media (max-width: $breakpoint_lg) {
+            max-width: 825px;
+        }
         li {
             position: relative;
             font-size: 28px;

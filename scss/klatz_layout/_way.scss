@@ -8,6 +8,7 @@
     }
 
     h2 {
+        z-index: 2;
         font-size: 50px;
         line-height: 150%;
         @include fw(700);
@@ -21,6 +22,7 @@
         &:before {
             content: '';
             position: absolute;
+            z-index: 1;
             bottom: -5px;
             width: 100%;
             left: 0;
@@ -46,6 +48,9 @@
             position: absolute;
             top: -160px;
             right: -70px;
+            @media (max-width: $breakpoint_lg) {
+                opacity: .5;
+            }
         }
         .text {
             position: relative;
@@ -73,6 +78,9 @@
                 opacity: .3;
     
                 @include image("way__start.svg");
+                @media (max-width: $breakpoint_lg) {
+                    opacity: .5;
+                }
             }
         }
         .img {
@@ -91,6 +99,9 @@
                 z-index: 1;
     
                 @include image("way__start.svg");
+                @media (max-width: $breakpoint_lg) {
+                    opacity: .5;
+                }
             }
 
             img {
@@ -118,6 +129,9 @@
             position: absolute;
             bottom: -100px;
             left: -150px;
+            @media (max-width: $breakpoint_lg) {
+                opacity: .5;
+            }
         }
 
         p {
@@ -127,6 +141,11 @@
             color: #FFC852;
 
             @include fw(700);
+            @media (max-width: $breakpoint_lg) {
+                position: relative;
+                z-index: 2;
+                font-size: 50px;
+            }
 
             &>span {
                 color: #E07188;
@@ -144,6 +163,9 @@
                 z-index: 1;
     
                 @include image("way__build.svg");
+                @media (max-width: $breakpoint_lg) {
+                    opacity: 0;
+                }
             }
 
             img {
@@ -152,6 +174,9 @@
                 left: 35px;
                 width: 355px;
                 height: 255px;
+                @media (max-width: $breakpoint_lg) {
+                    opacity: .5;
+                }
             }
         }
     }
@@ -169,6 +194,11 @@
             font-size: 70px;
             line-height: 140%;
             color: #fff;
+            @media (max-width: $breakpoint_lg) {
+                position: relative;
+                z-index: 2;
+                font-size: 35px;
+            }
 
             @include fw(700);
 
@@ -186,6 +216,9 @@
                 z-index: 3;
                 border: 10px solid #fff;
                 padding: 25px;
+                @media (max-width: $breakpoint_lg) {
+                    width: 500px;
+                }
             }
             &:before {
                 content: '';
@@ -207,11 +240,18 @@
 
             p {
                 font-size: 50px;
+                @media (max-width: $breakpoint_lg) {
+                    font-size: 35px;
+                    margin-left: 10px;
+                }
             }
 
             .img {
                 img {
                     width: 680px;
+                    @media (max-width: $breakpoint_lg) {
+                        width: 500px;
+                    }
                 }
                 &:before {
                     display: none;
@@ -237,6 +277,11 @@
             text-transform: none;
             z-index: 2;
             @include fw(700);
+            @media (max-width: $breakpoint_lg) {
+                position: relative;
+                z-index: 2;
+                left: -6px;
+            }
             &:before {
                 content: '';
                 position: absolute;
@@ -274,6 +319,9 @@
                 height: 506px;
                 position: relative;
                 z-index: 3;
+                @media (max-width: $breakpoint_lg) {
+                    opacity: .5;
+                }
             }
             
             &:after {
@@ -286,6 +334,9 @@
                 top: 210px;
                 right: 0;
                 z-index: 2;
+                @media (max-width: $breakpoint_lg) {
+                    opacity: .5;
+                }
             }
             &:before {
                 content: '';
@@ -297,6 +348,9 @@
                 top: 100px;
                 right: 56px;
                 z-index: 1;
+                @media (max-width: $breakpoint_lg) {
+                    opacity: .5;
+                }
             }
         }
 
@@ -306,6 +360,10 @@
             background: #F8DD4D;
             max-width: 1066px;
             min-height: 567px;
+            @media (max-width: $breakpoint_lg) {
+                left: 0px;
+                background: transparent;
+            }
             &:before {
                 content: '';
                 width: 262px;
@@ -315,6 +373,9 @@
                 left: -200px;
                 background: #02B784;
                 border-radius: 50%;
+                @media (max-width: $breakpoint_lg) {
+                    opacity: .5;
+                }
             }
             &:after {
                 content: '';
@@ -324,6 +385,9 @@
                 bottom: 60px;
                 left: 5px;
                 @include image("way__understand_left.png");
+                @media (max-width: $breakpoint_lg) {
+                    opacity: .5;
+                }
             }
         }
 
@@ -361,6 +425,9 @@
                 height: 151px;
 
                 @include image("way__evaluation_figure.svg");
+                @media (max-width: $breakpoint_lg) {
+                    opacity: .5;
+                }
             }
         }
 
@@ -376,6 +443,9 @@
                 z-index: 2;
 
                 @include image("way__evaluation_paste.png");
+                @media (max-width: $breakpoint_lg) {
+                    opacity: .5;
+                }
             }
 
             &:after {
@@ -388,6 +458,9 @@
                 z-index: 1;
 
                 @include image("way__evaluation_vector1.svg");
+                @media (max-width: $breakpoint_lg) {
+                    opacity: .5;
+                }
             }
             
             img {
@@ -422,6 +495,9 @@
                     z-index: 1;
 
                     @include image("way__evaluation_vector2.svg");
+                    @media (max-width: $breakpoint_lg) {
+                        opacity: .5;
+                    }
                 }
             }
         }

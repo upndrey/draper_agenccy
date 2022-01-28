@@ -32,6 +32,9 @@
             padding: 50px 100px 179px 100px;
             background: #D8D3C9;
             position: relative;
+            @media (max-width: $breakpoint_lg) {
+                max-width: 100%;
+            }
         }
 
         p {

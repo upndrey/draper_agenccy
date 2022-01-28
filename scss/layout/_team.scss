@@ -40,6 +40,9 @@
             width: 250px;
             margin-bottom: 104px;
             
+            @media (max-width: $breakpoint_lg) {
+                margin-bottom: 70px;
+            }
             img {
                 position: relative;
                 width: 186px;
@@ -74,9 +77,15 @@
             &:nth-child(2),
             &:nth-child(3) {
                 width: 315px;
+                @media (max-width: $breakpoint_lg) {
+                    width: 282px;
+                }
             }
             &:nth-child(1) {
                 margin-left: 40px;
+                @media (max-width: $breakpoint_lg) {
+                    margin-left: 59px;
+                }
             }
             &:nth-child(3) {
                 margin-right: 40px;
@@ -86,6 +95,9 @@
             &:nth-child(6),
             &:nth-child(7) {
                 width: 279px;
+                @media (max-width: $breakpoint_lg) {
+                    width: 236px;
+                }
                 img {
                     margin-bottom: 38px;
                 }

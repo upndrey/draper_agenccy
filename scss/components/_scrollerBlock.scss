@@ -12,8 +12,22 @@
         opacity: 0.5;
         transform: rotate(-90deg);
         @include fw(700);
+        
+        @media (max-width: $breakpoint_lg) {
+            left: -150px;
+            font-size: 80px;
+        }
     }
     .scroller {
         align-self: flex-end;
+        @media (max-width: $breakpoint_lg) {
+            max-width: calc(100% - 100px);
+        }
+        img {
+            
+            @media (max-width: $breakpoint_lg) {
+                max-width: 100%;
+            }
+        }
     }
 }

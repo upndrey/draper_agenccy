@@ -60,5 +60,12 @@
 
             @include fw(700);
         }
+
+        img {
+            
+            @media (max-width: $breakpoint_lg) {
+                max-width: 100%;
+            }
+        }
     }
 }

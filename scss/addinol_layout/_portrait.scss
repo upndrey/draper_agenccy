@@ -25,6 +25,9 @@
         ul {
             max-width: 473px;
 
+            @media (max-width: $breakpoint_lg) {
+                max-width: 435px;
+            }
             &:first-child {
                 margin-right: 57px;
             }

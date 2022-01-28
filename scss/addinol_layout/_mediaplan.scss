@@ -25,4 +25,10 @@
         justify-content: center;
         padding: 30px 20px 23px 20px;
     }
+
+    img {
+        @media (max-width: $breakpoint_lg) {
+            max-width: 100%;
+        }
+    }
 }

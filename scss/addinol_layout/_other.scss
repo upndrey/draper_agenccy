@@ -114,6 +114,9 @@
             height: 710px;
             @include image("other__contacts_woman.png");
             z-index: 1;
+            @media (max-width: $breakpoint_lg) {
+                right: 50px;
+            }
         }
 
         &>p {

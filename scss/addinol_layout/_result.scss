@@ -16,6 +16,10 @@
         height: 357px;
 
         @include image("result__car.png");
+        @media (max-width: $breakpoint_lg) {
+            z-index: 1;
+        }
+
     }
 
     &>p {
@@ -33,9 +37,16 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        @media (max-width: $breakpoint_lg) {
+            right: 0;
+            z-index: 2;
+        }
 
         img {
             margin-right: 78px;
+            @media (max-width: $breakpoint_lg) {
+                margin-right: 0;
+            }
         }
 
         div {

@@ -9,6 +9,7 @@
     }
 
     &:before {
+        z-index: 1;
         content: '';
         width: 478px;
         height: 486px;
@@ -17,9 +18,13 @@
         right: -42px;
 
         @include image("lovely__vector.svg");
+        @media (max-width: $breakpoint_lg) {
+            opacity: .3;
+        }
     }
 
     &:after{ 
+        z-index: 2;
         content: '';
         width: 455px;
         height: 430px;
@@ -28,9 +33,14 @@
         right: 0;
 
         @include image("lovely__img.png");
+        @media (max-width: $breakpoint_lg) {
+            opacity: .5;
+        }
     }
 
     p {
+        position: relative;
+        z-index: 3;
         max-width: 934px;
         font-size: 50px;
         line-height: 63px;

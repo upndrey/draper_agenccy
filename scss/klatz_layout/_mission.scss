@@ -16,6 +16,9 @@
             z-index: 1;
 
             @include image("mission__vector.svg");
+            @media (max-width: $breakpoint_lg) {
+                opacity: .5;
+            }
         }
 
         &:after {
@@ -28,6 +31,9 @@
             z-index: 2;
 
             @include image("mission__img.png");
+            @media (max-width: $breakpoint_lg) {
+                opacity: .5;
+            }
         }
     }
 

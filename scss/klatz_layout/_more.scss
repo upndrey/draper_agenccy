@@ -28,6 +28,9 @@
         left: 700px;
 
         @include image("more__tv.png");
+        @media (max-width: $breakpoint_lg) {
+            display: none;
+        }
     }
 
     h2 {

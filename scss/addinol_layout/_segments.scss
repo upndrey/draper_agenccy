@@ -3,6 +3,9 @@
         padding-top: 120px;
         padding-bottom: 140px;
         background: #e9d9c3;
+        @media (max-width: $breakpoint_lg) {
+            overflow: hidden;
+        }
     }
 
     &>p {

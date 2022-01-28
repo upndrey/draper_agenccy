@@ -72,6 +72,9 @@
             top: 0;
             padding: 1px;
             border: 6px dashed #BF4D11;
+            @media (max-width: $breakpoint_lg) {
+                left: -300px;
+            }
         }
     }
 
