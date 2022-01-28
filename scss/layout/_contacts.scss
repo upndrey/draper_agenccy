@@ -10,6 +10,10 @@
         padding-top: 120px;
         padding-bottom: 158px;
         background: rgba(73, 66, 65, 1);
+        @media (max-width: $breakpoint_md) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
 
     &>p {

@@ -1,5 +1,14 @@
 document.addEventListener("DOMContentLoaded", main);
 function main() {
+    
+    // burger
+    let burgerDom = document.querySelector(".burger");
+    let mobileNavDom = document.querySelector(".mobileNav__wrapper");
+    burgerDom.addEventListener("click", () => {
+        burgerDom.classList.toggle("active");
+        mobileNavDom.classList.toggle("hidden");
+    });
+
     const services = new Services();
     services.init();
 }

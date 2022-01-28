@@ -53,6 +53,10 @@
             box-sizing: border-box;
             box-shadow: -4px 4px 0px #001D3D;
             border-radius: 32px;
+            @media (max-width: $breakpoint_lg) {
+                min-width: 156px;
+                min-height: 156px;
+            }
 
             &:before {
                 content: '';
@@ -83,6 +87,11 @@
             color: #02B784;
 
             @include fw(700);
+            @media (max-width: $breakpoint_md) {
+                font-size: 30px;
+                line-height: normal;
+                margin-left: 42px;
+            }
         }
     }
 
@@ -93,6 +102,9 @@
         align-items: center;
         justify-content: flex-end;
 
+        @media (max-width: $breakpoint_md) {
+            flex-direction: column-reverse;
+        }
         &:before {
             content: '';
             width: 249px;
@@ -113,6 +125,9 @@
             bottom: -284px;
 
             @include image("person__woman.png");
+            @media (max-width: $breakpoint_md) {
+                z-index: 2;
+            }
         }
     }
 
@@ -172,5 +187,10 @@
         color: #001429;
 
         @include fw(700);
+        @media (max-width: $breakpoint_md) {
+            z-index: 5;
+            margin-left: 0;
+            margin-bottom: 50px;
+        }
     }
 }

@@ -10,6 +10,9 @@
         @include image("cjm__bg.jpg", cover);
         overflow: hidden;
 
+        @media (max-width: $breakpoint_md) {
+            height: fit-content;
+        }
         &:before {
             content: '';
             position: absolute;
@@ -29,6 +32,10 @@
         margin-bottom: 11px;
 
         @include fw(700);
+        @media (max-width: $breakpoint_md) {
+            font-size: 35px;
+            line-height: normal;
+        }
     }
 
     &__map {

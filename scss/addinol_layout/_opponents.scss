@@ -3,6 +3,11 @@
     display: flex;
     justify-content: flex-end;
 
+    @media (max-width: $breakpoint_md) {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
     &__wrapper {
         position: relative;
         overflow: hidden;
@@ -21,6 +26,10 @@
             z-index: 2;
 
             @include image("opponents__man.png");
+            @media (max-width: $breakpoint_md) {
+                z-index: 1;
+                opacity: .5;
+            }
         }
     }
 
@@ -45,6 +54,12 @@
         margin-right: 20px;
         margin-top: 20px;
 
+        @media (max-width: $breakpoint_md) {
+            margin-right: 0;
+            margin-bottom: 30px;
+            width: 510px;
+            max-width: 100%;
+        }
         &:before {
             content: '';
             position: absolute;
@@ -64,10 +79,18 @@
 
             @include fw(700);
 
+            @media (max-width: $breakpoint_md) {
+                font-size: 30px;
+                line-height: normal;
+            }
             &:first-child {
                 margin-bottom: 38px;
                 max-width: 510px;
 
+                @media (max-width: $breakpoint_md) {
+                    margin-bottom: 10px;
+                    max-width: 100%;
+                }
                 &:after {
                     content: '';
                     position: absolute;
@@ -91,6 +114,9 @@
             width: 412px;
             height: 450px;
 
+            @media (max-width: $breakpoint_md) {
+                width: 100%;
+            }
             &:before {
                 content: '';
                 position: absolute;
@@ -130,6 +156,9 @@
         align-items: center;
         justify-content: center;
 
+        @media (max-width: $breakpoint_md) {
+            max-width: 100%;
+        }
         p {
             font-size: 32px;
             line-height: 41px;

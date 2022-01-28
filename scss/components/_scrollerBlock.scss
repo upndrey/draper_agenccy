@@ -17,6 +17,9 @@
             left: -150px;
             font-size: 80px;
         }
+        @media (max-width: $breakpoint_md) {
+            top: 124px;
+        }
     }
     .scroller {
         align-self: flex-end;

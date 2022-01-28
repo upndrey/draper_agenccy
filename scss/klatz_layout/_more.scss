@@ -16,6 +16,9 @@
         left: -393px;
 
         @include image("more__money.png");
+        @media (max-width: $breakpoint_md) {
+            opacity: .2;
+        }
     }
 
     &:after {
@@ -48,12 +51,19 @@
         position: relative;
         left: -94px;
         margin-bottom: 117px;
+        @media (max-width: $breakpoint_md) {
+            font-size: 50px;
+            padding: 0 10px 0 110px;
+        }
     }
 
     ul {
         display: flex;
         flex-direction: column;
         margin: 0;
+        @media (max-width: $breakpoint_md) {
+            align-items: center;
+        }
 
         li {
             position: relative;
@@ -79,6 +89,11 @@
                 margin-bottom: 141px;
                 max-width: 510px;
 
+                @media (max-width: $breakpoint_md) {
+                    left: 0;
+                    max-width: 100%;
+                    min-width: 100%;
+                }
                 &:before {
                     background: #FEC700;
                 }
@@ -90,6 +105,14 @@
                 margin-bottom: 137px;
                 max-width: 403px;
 
+                @media (max-width: $breakpoint_md) {
+                    left: 0;
+                    max-width: 100%;
+                    min-width: 100%;
+                    &>br {
+                        display: none;
+                    }
+                }
                 &:before {
                     background: #61C9F3;
                 }
@@ -100,6 +123,14 @@
                 color: #C4C4C4;
                 max-width: 544px;
 
+                @media (max-width: $breakpoint_md) {
+                    left: 0;
+                    max-width: 100%;
+                    min-width: 100%;
+                    &>br {
+                        display: none;
+                    }
+                }
                 &:before {
                     background: #FFC9C7;
                 }

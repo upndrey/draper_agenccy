@@ -1,4 +1,8 @@
 .addinol {
+    position: relative;
+    @media (max-width: $breakpoint_md) {
+        z-index: 3;
+    }
     &__wrapper {
         position: relative;
         padding-top: 132px;
@@ -15,6 +19,9 @@
         height: 305px;
         border-left: 10px solid #D4936A;
         border-bottom: 10px solid #D4936A;
+        @media (max-width: $breakpoint_md) {
+            z-index: 1;
+        }
         &:before {
             content: '';
             position: absolute;
@@ -23,6 +30,9 @@
             width: 170px;
             height: 253px;
             @include image("addinol__oil.png");
+            @media (max-width: $breakpoint_md) {
+                z-index: 2;
+            }
         }
     }
 
@@ -44,6 +54,11 @@
         line-height: 120px;
         letter-spacing: 0.05em;
         color: rgba(22, 16, 8, 1);
+        @media (max-width: $breakpoint_md) {
+            text-align: center;
+            width: fit-content;
+            margin: auto;
+        }
         &:before {
             content: '';
             position: absolute;
@@ -60,6 +75,9 @@
         color: rgba(0, 0, 0, 0.5);
         @include fw(400);
         margin-bottom: 60px;
+        @media (max-width: $breakpoint_md) {
+            text-align: center;
+        }
     }
     &>div {
         clear: both;
@@ -74,6 +92,12 @@
             border: 6px dashed #BF4D11;
             @media (max-width: $breakpoint_lg) {
                 left: -300px;
+            }
+            @media (max-width: $breakpoint_md) {
+                left: 0;
+                right: 0;
+                margin: auto;
+                opacity: .1;
             }
         }
     }
@@ -93,6 +117,9 @@
                 &:after {
                     left: 0;
                     width: calc(100% + 120px);
+                    @media (max-width: $breakpoint_md) {
+                        width: calc(100% + 500px);
+                    }
                 }
                 &:nth-child(1) {
                     &:after {

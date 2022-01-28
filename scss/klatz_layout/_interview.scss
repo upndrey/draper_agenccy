@@ -15,5 +15,9 @@
         color: #000000;
 
         @include fw(700);
+        @media (max-width: $breakpoint_md) {
+            font-size: 30px;
+            line-height: normal;
+        }
     }
 }

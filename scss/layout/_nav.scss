@@ -10,6 +10,32 @@
         height: 100px;
         background: #000;
         z-index: 999;
+
+        
+        .mobileNav__wrapper {
+            background: #000;
+            color: #fff;
+            display: block;
+            &.hidden {
+                display: none;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    list-style: none;
+                    @include fw(700);
+                    line-height: 22px;
+                    font-size: 14px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
     }
 
     &__left {
@@ -31,11 +57,80 @@
         align-items: center;
         justify-content: space-between;
         margin-left: 51px;
+        @media (max-width: $breakpoint_md) {
+            display: none;
+        }
         li {
             cursor: pointer;
             margin-right: 40px;
             &:last-child {
                 margin-right: 0;
+            }
+        }
+    }
+
+    .burger {
+        display: none;
+        @media (max-width: $breakpoint_md) {
+            display: flex;
+        }
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 30px;
+        cursor: pointer;
+        transition: .4s;
+        z-index: 1002;
+        margin-left: 20px;
+        &__icon {
+            display: block;
+            position: relative;
+            bottom: 8px;
+            background: #fff;
+            width: 90%;
+            height: 2px;
+            transition: .4s;
+
+            &::after,
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                background: #fff;
+                width: 100%;
+                height: 2px;
+                transition: .4s;
+                right: 0;
+            }
+
+            &::after {
+                top: 8px;
+                width: 80%;
+            }
+            &::before {
+                top: 16px;
+                width: 50%;
+            }
+        }
+
+        &.active>.burger__icon {
+            background: transparent;
+
+            &::before,
+            &::after {
+                top: 8px;
+                width: 100%;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+            }
+
+            &::before {
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
             }
         }
     }
@@ -50,6 +145,9 @@
         line-height: 16px;
         font-size: 14px;
         margin-right: 22px;
+        @media (max-width: $breakpoint_md) {
+            display: none;
+        }
     }
 
     .btn {

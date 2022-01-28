@@ -30,6 +30,10 @@
         font-size: 38px;
         line-height: 140%;
         color: #FFFFFF;
+        @media (max-width: $breakpoint_md) {
+            font-size: 30px;
+            line-height: normal;
+        }
 
         @include fw(700);
         &:first-child {

@@ -36,6 +36,9 @@
         @media (max-width: $breakpoint_lg) {
             opacity: .5;
         }
+        @media (max-width: $breakpoint_md) {
+            top: 0px;
+        }
     }
 
     p {
@@ -46,6 +49,10 @@
         line-height: 63px;
         color: #fff;
         @include fw(700);
+        @media (max-width: $breakpoint_md) {
+            font-size: 30px;
+            line-height: normal;
+        }
         &:first-child {
             margin-bottom: 65px;
         }

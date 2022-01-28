@@ -12,6 +12,10 @@
         color: #000000;
 
         @include fw(700);
+        @media (max-width: $breakpoint_md) {
+            font-size: 30px;
+            line-height: normal;
+        }
     }
 
     a {
@@ -23,5 +27,9 @@
         text-transform: none;
 
         @include fw(700);
+        @media (max-width: $breakpoint_md) {
+            font-size: 26px;
+            line-height: normal;
+        }
     }
 }

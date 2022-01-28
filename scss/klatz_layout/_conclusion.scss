@@ -15,6 +15,11 @@
         margin-bottom: 73px;
 
         @include fw(700);
+        @media (max-width: $breakpoint_md) {
+            font-size: 40px;
+            max-width: 100%;
+            text-align: center;
+        }
     }
 
     &__images {
@@ -22,6 +27,9 @@
         position: absolute;
         top: 0;
         right: 100px;
+        @media (max-width: $breakpoint_md) {
+            display: none;
+        }
         div {
             position: absolute;
             &:nth-child(1) {
@@ -72,6 +80,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: $breakpoint_md) {
+            flex-direction: column;
+        }
     }
 
     &__left {
@@ -87,6 +98,11 @@
         justify-content: center;
         margin-right: 126px;
 
+        @media (max-width: $breakpoint_md) {
+            margin-right: 0;
+            margin-top: 70px;
+            margin-bottom: 100px;
+        }
         &:before {
             content: '';
             position: absolute;

@@ -26,6 +26,10 @@
 
         @include fw(700);
         margin-bottom: 58px;
+        @media (max-width: $breakpoint_md) {
+            font-size: 30px;
+            line-height: normal;
+        }
     }
 
     ol {
@@ -34,6 +38,11 @@
             line-height: 180%;
             color: #FFFFFF;
 
+            @media (max-width: $breakpoint_md) {
+                font-size: 22px;
+                line-height: normal;
+                margin-bottom: 10px;
+            }
             &:last-child {
                 line-height: 150%;
             }

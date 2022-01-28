@@ -13,6 +13,11 @@
 
         @include fw(700);
         margin-bottom: 40px;
+        @media (max-width: $breakpoint_md) {
+            font-size: 30px;
+            line-height: normal;
+            margin-bottom: 20px;
+        }
     }
 
     &__cases {
@@ -47,6 +52,9 @@
                 height: 271px;
 
                 @include image("other__cases_left.png");
+                @media (max-width: $breakpoint_md) {
+                    display: none;
+                }
             }
 
             &:after {
@@ -58,6 +66,9 @@
                 height: 333px;
 
                 @include image("other__cases_right.png");
+                @media (max-width: $breakpoint_md) {
+                    display: none;
+                }
             }
 
             img {
@@ -66,6 +77,9 @@
                 width: 219px;
                 height: 330px;
                 margin-right: 25px;
+                @media (max-width: $breakpoint_md) {
+                    right: 0;
+                }
             }
 
             &>div {
@@ -117,6 +131,9 @@
             @media (max-width: $breakpoint_lg) {
                 right: 50px;
             }
+            @media (max-width: $breakpoint_md) {
+                right: 0;
+            }
         }
 
         &>p {
@@ -127,6 +144,10 @@
 
             @include fw(700);
             margin-bottom: 55px;
+            @media (max-width: $breakpoint_md) {
+                font-size: 24px;
+                line-height: normal;
+            }
         }
 
         form {

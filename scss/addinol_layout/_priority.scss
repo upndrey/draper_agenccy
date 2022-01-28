@@ -16,12 +16,22 @@
 
         @include fw(700);
 
+        @media (max-width: $breakpoint_md) {
+            font-size: 30px;
+            line-height: normal;
+        }
         &:nth-child(1) {
             margin-bottom: 30px;
+            @media (max-width: $breakpoint_md) {
+                margin-bottom: 5px;
+            }
         }
 
         &:nth-child(2) {
             margin-bottom: 120px;
+            @media (max-width: $breakpoint_md) {
+                margin-bottom: 50px;
+            }
         }
     }
 
@@ -80,6 +90,9 @@
             justify-content: center;
             padding: 30px 55px 43px 43px;
 
+            @media (max-width: $breakpoint_lg) {
+                height: fit-content;
+            }
             .title {
                 font-size: 28px;
                 line-height: 130%;

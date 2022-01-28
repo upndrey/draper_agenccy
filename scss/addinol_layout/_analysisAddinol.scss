@@ -31,6 +31,9 @@
             @media (max-width: $breakpoint_lg) {
                 z-index: 1;
             }
+            @media (max-width: $breakpoint_md) {
+                opacity: .5;
+            }
         }
     }
 
@@ -47,6 +50,9 @@
         @media (max-width: $breakpoint_lg) {
             left: 0;
         }
+        @media (max-width: $breakpoint_md) {
+            font-size: 40px;
+        }
     }
 
     h2 + p {
@@ -59,6 +65,9 @@
 
         @media (max-width: $breakpoint_lg) {
             left: 0;
+        }
+        @media (max-width: $breakpoint_md) {
+            font-size: 24px;
         }
         @include fw(700);
         margin-bottom: 108px;
@@ -95,6 +104,9 @@
         @media (max-width: $breakpoint_lg) {
             left: 0;
         }
+        @media (max-width: $breakpoint_md) {
+            flex-direction: column;
+        }
     }
 
     &__left {
@@ -112,6 +124,9 @@
         justify-content: center;
 
         @include image("analysisAddinol__struct.svg");
+        @media (max-width: $breakpoint_md) {
+            margin-bottom: 50px;
+        }
     }
 
     &__right {
@@ -137,6 +152,10 @@
             &.first {
                 margin-bottom: 20px;
             }
+            @media (max-width: $breakpoint_md) {
+                z-index: 3;
+                font-size: 30px;
+            }
         }
     }
 
@@ -151,6 +170,11 @@
         margin-bottom: 30px;
         margin-left: 5px;
 
+        @media (max-width: $breakpoint_md) {
+            &>br {
+                display: none;
+            }
+        }
         &:after {
             content: '';
             position: relative;

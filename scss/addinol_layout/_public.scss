@@ -17,6 +17,9 @@
         height: 396px;
 
         @include image("public__people.png");
+        @media (max-width: $breakpoint_md) {
+            display: none;
+        }
     }
 
     &:after {
@@ -38,6 +41,11 @@
 
         @include fw(700);
         margin-bottom: 80px;
+        @media (max-width: $breakpoint_md) {
+            font-size: 30px;
+            line-height: normal;
+            margin-bottom: 30px;
+        }
     }
 
     ul {
@@ -46,6 +54,9 @@
 
         @media (max-width: $breakpoint_lg) {
             max-width: 825px;
+        }
+        @media (max-width: $breakpoint_md) {
+            max-width: calc(100% - 50px);
         }
         li {
             position: relative;
@@ -57,6 +68,10 @@
 
             &:not(:last-child) {
                 margin-bottom: 30px;
+            }
+            @media (max-width: $breakpoint_md) {
+                font-size: 20px;
+                line-height: normal;
             }
 
             &:before {

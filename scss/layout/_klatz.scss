@@ -12,6 +12,11 @@
         .klatz {
             padding-bottom: 138px;
         }
+        @media (max-width: $breakpoint_md) {
+            .klatz>div>img {
+                top: 200px;
+            }
+        }
     }
 
     h2 {
@@ -38,6 +43,14 @@
             width: 100%;
             max-width: 688px;
             height: 1041px;
+            @media (max-width: $breakpoint_md) {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                z-index: 1;
+                opacity: .2;
+            }
         }
     }
 
@@ -49,6 +62,10 @@
             margin-bottom: 46px;
             text-transform: uppercase;
             @include fw(700);
+            @media (max-width: $breakpoint_md) {
+                text-align: center;
+                font-size: 35px;
+            }
         }
         &>ul {
             padding: 0;
@@ -66,6 +83,9 @@
                 &:nth-child(2) {
                     &:after {
                         width: calc(170px + 120px);
+                        @media (max-width: $breakpoint_md) {
+                            width: calc(360px + 500px);
+                        }
                     }
                 }
 
@@ -78,6 +98,9 @@
                 &:nth-child(5) {
                     &:after {
                         width: calc(145px + 120px);
+                        @media (max-width: $breakpoint_md) {
+                            width: calc(124px + 500px);
+                        }
                         bottom: -4px;
                     }
                 }
@@ -98,6 +121,9 @@
         margin-bottom: 36px;
         @include image("klatz__logo.svg");
 
+        @media (max-width: $breakpoint_md) {
+            margin-bottom: 10px;
+        }
         &:before {
             content: '';
             position: absolute;

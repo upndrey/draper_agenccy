@@ -50,8 +50,16 @@
         @media (max-width: $breakpoint_lg) {
             max-width: 900px;
         }
+        @media (max-width: $breakpoint_md) {
+            flex-direction: column;
+            align-items: center;
+        }
         ul {
             max-width: 400px;
+            @media (max-width: $breakpoint_md) {
+                max-width: 100%;
+                width: 350px;
+            }
             li {
                 width: fit-content;
                 position: relative;
@@ -64,6 +72,10 @@
                 text-decoration-color: black;
                 
 
+                @media (max-width: $breakpoint_md) {
+                    font-size: 24px;
+                    line-height: normal;
+                }
                 @include fw(700);
                 &:not(:last-child) {
                     margin-bottom: 20px;

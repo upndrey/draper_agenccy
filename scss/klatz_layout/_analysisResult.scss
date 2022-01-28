@@ -1,6 +1,10 @@
 .analysisResult {
     display: flex;
     justify-content: space-around;
+    @media (max-width: $breakpoint_md) {
+        flex-direction: column;
+        align-items: center;
+    }
     &__wrapper {
         padding-top: 170px;
         padding-bottom: 170px;
@@ -8,6 +12,9 @@
         height: 1200px;
         box-sizing: border-box;
         position: relative;
+        @media (max-width: $breakpoint_md) {
+            height: fit-content;
+        }
 
         &:before {
             content: '';
@@ -20,6 +27,9 @@
             margin: auto;
 
             @include image("analysisResult__logo.svg");
+            @media (max-width: $breakpoint_md) {
+                max-width: 100%;
+            }
         }
         
         h2 {
