@@ -40,6 +40,7 @@
         @media (max-width: $breakpoint_md) {
             margin-right: 0px;
             min-width: 100%;
+            margin-bottom: 50px;
         }
         .link {
             width: 100%;
@@ -161,7 +162,8 @@
             width: 100%;
         }
 
-        &>div {
+        &>div,
+        .slick__elem .active {
             display: none;
             flex-direction: column;
             width: 100%;
@@ -267,6 +269,88 @@
 
             &#creativeStrategy {
                 background: #e4e4e4;
+            }
+        }
+    }
+
+    .notSlick {
+        @media (max-width: $breakpoint_md) {
+            display: none;
+        }
+    }
+
+    .slick {
+        @media (min-width: $breakpoint_md) {
+            display: none;
+        }
+        &>div {
+            display: block;
+            background: transparent;
+            border: none;
+        }
+        .slick-arrow {
+            position: absolute !important;
+            top: -30px !important;
+        }
+        .slick-prev {
+            left: 0;
+        }
+        .slick-next {
+            right: 0;
+        }
+        .slick-dots {
+            position: absolute !important;
+            top: -30px !important;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+            &>li {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 1px solid black;
+                color: transparent;
+                background: transparent;
+
+                &.slick-active {
+                    background: #000;
+                }
+                &>button {
+                    display: none;
+                }
+            }
+        }
+        .slick-slide {
+            margin: 0 10px;
+            .active {
+                min-height: fit-content;
+                &>.title {
+                    margin-bottom: 15px;
+                }
+                &>.text {
+                    min-height: fit-content;
+                    padding: 20px;
+
+                    @media (max-width: $breakpoint_sm) {
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                    }
+
+                    li>.text {
+                        display: none;
+                    }
+                }
+                &>.bottom {
+                    text-align: center;
+                }
+                .btn_action {
+                    max-width: 100%;
+                    text-align: center;
+                }
             }
         }
     }

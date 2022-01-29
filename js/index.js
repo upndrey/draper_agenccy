@@ -1,7 +1,16 @@
 document.addEventListener("DOMContentLoaded", main);
 function main() {
-    
-    // burger
+    const burger = new Burger();
+    burger.init();
+
+    const slick = new Slick();
+    slick.init();
+
+    const services = new Services();
+    services.init();
+}
+
+function Burger() {
     let burgerDom = document.querySelector(".burger");
     let mobileNavDom = document.querySelector(".mobileNav__wrapper");
     burgerDom.addEventListener("click", () => {
@@ -9,8 +18,24 @@ function main() {
         mobileNavDom.classList.toggle("hidden");
     });
 
-    const services = new Services();
-    services.init();
+}
+
+Burger.prototype.init = function() {
+
+};
+ 
+function Slick() {
+    
+}
+
+Slick.prototype.init = function() {
+    if ($(window).width() <= 990) {
+        $('.slick').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        });
+    } 
 }
 
 function Services() {
@@ -50,6 +75,46 @@ Services.prototype.init = function() {
         "click", 
         this.switchActive.bind(this, this.creativeStrategyLink)
     ); 
+
+    $('.slick-next').click(() => {
+        switch(this.currentActiveLink) {
+            case this.brandStrategyLink:
+                this.switchActive(this.markStrategyLink);
+                break;
+            case this.markStrategyLink:
+                this.switchActive(this.markAnalysisLink);
+                break;
+            case this.markAnalysisLink:
+                this.switchActive(this.markTzLink);
+                break;
+            case this.markTzLink:
+                this.switchActive(this.creativeStrategyLink);
+                break;
+            case this.creativeStrategyLink:
+                this.switchActive(this.brandStrategyLink);
+                break;
+        }
+    });
+
+    $('.slick-prev').click(() => {
+        switch(this.currentActiveLink) {
+            case this.brandStrategyLink:
+                this.switchActive(this.creativeStrategyLink);
+                break;
+            case this.markStrategyLink:
+                this.switchActive(this.brandStrategyLink);
+                break;
+            case this.markAnalysisLink:
+                this.switchActive(this.markStrategyLink);
+                break;
+            case this.markTzLink:
+                this.switchActive(this.markAnalysisLink);
+                break;
+            case this.creativeStrategyLink:
+                this.switchActive(this.markTzLink);
+                break;
+        }
+    });
 };
 
 Services.prototype.switchActive = function(currentLink) {
