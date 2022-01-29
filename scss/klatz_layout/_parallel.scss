@@ -17,6 +17,10 @@
         @media (max-width: $breakpoint_lg) {
             font-size: 50px;
         }
+        @media (max-width: $breakpoint_sm) {
+            font-size: 30px;
+            line-height: normal;
+        }
 
         &:after {
             z-index: -1;

@@ -90,6 +90,9 @@
                     height: 33px;
                     
                     @include image("brand__star.svg");
+                    @media (max-width: $breakpoint_sm) {
+                        display: none;
+                    }
                 }
             }
         }

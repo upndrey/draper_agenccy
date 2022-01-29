@@ -83,6 +83,10 @@
                 font-size: 30px;
                 line-height: normal;
             }
+            @media (max-width: $breakpoint_sm) {
+                font-size: 20px;
+                line-height: normal;
+            }
             &:first-child {
                 margin-bottom: 38px;
                 max-width: 510px;
@@ -159,6 +163,11 @@
         @media (max-width: $breakpoint_md) {
             max-width: 100%;
         }
+        @media (max-width: $breakpoint_sm) {
+            img {
+                max-width: 100%;
+            }
+        }
         p {
             font-size: 32px;
             line-height: 41px;
@@ -170,6 +179,10 @@
             margin-left: 15px;
 
             align-self: start;
+            @media (max-width: $breakpoint_sm) {
+                font-size: 20px;
+                line-height: normal;
+            }
         }
     }
 }

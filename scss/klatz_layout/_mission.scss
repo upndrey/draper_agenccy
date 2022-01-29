@@ -57,6 +57,11 @@
         margin-bottom: 20px;
 
         @include fw(700);
+        @media (max-width: $breakpoint_sm) {
+            font-size: 20px;
+            line-height: normal;
+            margin-bottom: 10px;
+        }
     }
 
     h2 {
@@ -69,6 +74,9 @@
         @media (max-width: $breakpoint_md) {
             font-size: 50px;
             line-height: normal;
+        }
+        @media (max-width: $breakpoint_sm) {
+            font-size: 30px;
         }
     }
 }

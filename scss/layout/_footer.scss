@@ -4,15 +4,26 @@
     align-items: center;
     color: #fff;
     height: inherit;
+    @media (max-width: $breakpoint_sm) {
+        flex-direction: column;
+    }
     &__wrapper {
         height: 189px;
         background: #000;
         z-index: 999;
+        @media (max-width: $breakpoint_sm) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            height: fit-content;
+        }
     }
 
     &__left {
         display: flex;
         align-items: center;
+        @media (max-width: $breakpoint_sm) {
+            flex-direction: column;
+        }
     }
 
     &__logo {
@@ -29,11 +40,19 @@
         align-items: center;
         justify-content: space-between;
         margin-left: 51px;
+        @media (max-width: $breakpoint_sm) {
+            flex-direction: column;
+            margin-left: 0;
+        }
         li {
             cursor: pointer;
             margin-right: 40px;
             &:last-child {
                 margin-right: 0;
+            }
+            @media (max-width: $breakpoint_sm) {
+                margin-right: 0;
+                margin-bottom: 10px;
             }
         }
     }

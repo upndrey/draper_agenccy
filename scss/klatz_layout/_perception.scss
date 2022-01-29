@@ -3,11 +3,17 @@
     top: 139px;
     left: 0;
     right: 0;
+    @media (max-width: $breakpoint_sm) {
+        position: relative;
+    }
     &__wrapper {
         position: relative;
         height: 1012px;
         box-sizing: border-box;
         background: #fff;
+        @media (max-width: $breakpoint_sm) {
+            height: fit-content;
+        }
     }
 
     &__images {
@@ -27,6 +33,9 @@
             height: 198px;
     
             @include image("perception__vector.svg");
+            @media (max-width: $breakpoint_sm) {
+                opacity: .5;
+            }
         }
     
         &:after {
@@ -38,6 +47,9 @@
             height: 333px;
     
             @include image("perception__paste.png");
+            @media (max-width: $breakpoint_sm) {
+                opacity: .5;
+            }
         }
     }
 
@@ -48,6 +60,10 @@
         margin-bottom: 59px;
         @media (max-width: $breakpoint_md) {
             font-size: 30px;
+        }
+        @media (max-width: $breakpoint_sm) {
+            font-size: 20px;
+            line-height: normal;
         }
 
         @include fw(700);

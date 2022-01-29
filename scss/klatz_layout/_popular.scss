@@ -4,6 +4,9 @@
     &__wrapper {
         padding-top: 124px;
         background: #F1F58F;
+        @media (max-width: $breakpoint_sm) {
+            padding-top: 50px;
+        }
     }
 
     &:after {
@@ -24,10 +27,16 @@
         @include fw(700);
         &:first-child {
             margin-bottom: 34px;
+            @media (max-width: $breakpoint_sm) {
+                margin-bottom: 20px;
+            }
         }
         @media (max-width: $breakpoint_md) {
             font-size: 30px;
             line-height: normal;
+        }
+        @media (max-width: $breakpoint_sm) {
+            font-size: 20px;
         }
     }
 
@@ -45,6 +54,9 @@
             align-items: center;
             height: fit-content;
             padding: 5px;
+        }
+        @media (max-width: $breakpoint_sm) {
+            margin-bottom: 20px;
         }
 
         &>img {

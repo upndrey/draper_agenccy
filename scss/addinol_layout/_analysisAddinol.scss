@@ -6,6 +6,10 @@
         padding-bottom: 218px;
         background: #8293FCE5;
         overflow: hidden;
+        @media (max-width: $breakpoint_sm) {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
 
         &:before {
             content: '';
@@ -17,6 +21,9 @@
             @include image("analysisAddinol__vintage.png");
             @media (max-width: $breakpoint_lg) {
                 opacity: .3;
+            }
+            @media (max-width: $breakpoint_sm) {
+                opacity: .1;
             }
         }
 
@@ -33,6 +40,9 @@
             }
             @media (max-width: $breakpoint_md) {
                 opacity: .5;
+            }
+            @media (max-width: $breakpoint_sm) {
+                display: none;
             }
         }
     }
@@ -137,6 +147,12 @@
         @media (max-width: $breakpoint_lg) {
             margin-left: 10px;
         }
+        @media (max-width: $breakpoint_sm) {
+            max-width: 100%;
+            margin-left: 0;
+            z-index: 4;
+            position: relative;
+        }
         img {
             margin-bottom: 15px;
             max-width: 510px;
@@ -156,7 +172,19 @@
                 z-index: 3;
                 font-size: 30px;
             }
+            @media (max-width: $breakpoint_sm) {
+                font-size: 20px;
+                line-height: normal;
+            }
         }
+    }
+
+    .lightPreblock {
+        
+        @media (max-width: $breakpoint_md) {
+            display: none;
+        }
+
     }
 
     &__preBlock {
@@ -175,6 +203,7 @@
                 display: none;
             }
         }
+
         &:after {
             content: '';
             position: relative;
@@ -202,6 +231,9 @@
         padding: 16px;
         box-sizing: border-box;
         margin-bottom: 92px;
+        @media (max-width: $breakpoint_md) {
+            display: none;
+        }
 
         &:before {
             content: '';
@@ -230,16 +262,31 @@
 
             &>img {
                 float: right;
+                @media (max-width: $breakpoint_md) {
+                    max-width: 100%;
+                }
             }
 
             &>div {
                 clear: both;
                 display: flex;
 
+                @media (max-width: $breakpoint_md) {
+                    position: relative;
+                    font-size: 30px;
+                    line-height: normal;
+                }
                 &>img {
                     position: relative;
                     right: 80px;
                     z-index: 1;
+                    @media (max-width: $breakpoint_md) {
+                        max-width: 100%;
+                        position: absolute;
+                        top: 20px;
+                        right: 0;
+                        left: 0;
+                    }
                 }
 
                 &>div {
@@ -251,6 +298,10 @@
                     align-items: center;
                     height: 200px;
 
+                    @media (max-width: $breakpoint_md) {
+                        font-size: 30px;
+                        line-height: normal;
+                    }
                     p {
                         width: 230px;
                         font-size: 18px;
@@ -285,5 +336,11 @@
         height: 250px;
         border: 10px solid #FFFFFF;
         padding: 20px;
+        @media (max-width: $breakpoint_sm) {
+            height: fit-content;
+            img {
+                max-width: 100%;
+            }
+        }
     }
 }

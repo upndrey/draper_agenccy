@@ -5,6 +5,10 @@
     z-index: 1;
     background: #0C090D;
 
+    @media (max-width: $breakpoint_sm) {
+        height: fit-content;
+        padding-bottom: 0;
+    }
 
     &:before {
         content: '';
@@ -28,6 +32,9 @@
         padding: 76px 113px 92px 106px;
         @media (max-width: $breakpoint_md) {
             padding: 30px;
+        }
+        @media (max-width: $breakpoint_sm) {
+            top: -100px;
         }
 
         &>div {
@@ -55,6 +62,10 @@
                 font-size: 30px;
                 z-index: 3;
             }
+            @media (max-width: $breakpoint_sm) {
+                font-size: 20px;
+                line-height: normal;
+            }
         }
 
         input[name=email] {
@@ -72,6 +83,9 @@
                 z-index: 1;
                 opacity: .5;
                 right: 0;
+            }
+            @media (max-width: $breakpoint_sm) {
+                opacity: .1;
             }
         }
     }

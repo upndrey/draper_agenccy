@@ -30,6 +30,9 @@
         box-sizing: border-box;
         margin-bottom: 95px;
 
+        @media (max-width: $breakpoint_sm) {
+            padding: 10px;
+        }
         &>div {
             position: relative;
             width: 100%;
@@ -80,9 +83,21 @@
                 @media (max-width: $breakpoint_md) {
                     right: 0;
                 }
+                @media (max-width: $breakpoint_sm) {
+                    position: absolute;
+                    opacity: .3;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    z-index: 1;
+                }
             }
 
             &>div {
+                @media (max-width: $breakpoint_sm) {
+                    position: relative;
+                    z-index: 3;
+                }
                 .logo {
                     width: 211px;
                     height: 38px;
@@ -119,6 +134,9 @@
         box-sizing: border-box;
         height: 630px;
 
+        @media (max-width: $breakpoint_sm) {
+            padding: 15px;
+        }
         &:after {
             content: '';
             position: absolute;
@@ -133,6 +151,7 @@
             }
             @media (max-width: $breakpoint_md) {
                 right: 0;
+                opacity: .3;
             }
         }
 
@@ -147,6 +166,9 @@
             @media (max-width: $breakpoint_md) {
                 font-size: 24px;
                 line-height: normal;
+            }
+            @media (max-width: $breakpoint_sm) {
+                font-size: 20px;
             }
         }
 

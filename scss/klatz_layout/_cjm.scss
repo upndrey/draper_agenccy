@@ -36,6 +36,9 @@
             font-size: 35px;
             line-height: normal;
         }
+        @media (max-width: $breakpoint_sm) {
+            font-size: 30px;
+        }
     }
 
     &__map {
@@ -45,6 +48,10 @@
         margin-bottom: 36px;
 
         @include fw(700);
+        @media (max-width: $breakpoint_sm) {
+            font-size: 20px;
+            line-height: normal;
+        }
     }
 
     &__block {
@@ -66,6 +73,10 @@
             margin-bottom: 25px;
 
             @include fw(700);
+            @media (max-width: $breakpoint_sm) {
+                font-size: 30px;
+                line-height: normal;
+            }
         }
 
         img {

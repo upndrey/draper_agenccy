@@ -51,6 +51,9 @@
                 z-index: 1;
                 opacity: .2;
             }
+            @media (max-width: $breakpoint_sm) {
+                height: auto;
+            }
         }
     }
 
@@ -85,6 +88,9 @@
                         width: calc(170px + 120px);
                         @media (max-width: $breakpoint_md) {
                             width: calc(360px + 500px);
+                        }
+                        @media (max-width: $breakpoint_sm) {
+                            width: calc(150px + 500px);
                         }
                     }
                 }

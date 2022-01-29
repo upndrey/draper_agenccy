@@ -5,6 +5,9 @@
         flex-direction: column;
         align-items: center;
     }
+    @media (max-width: $breakpoint_sm) {
+        align-items: start;
+    }
     &__wrapper {
         padding-top: 170px;
         padding-bottom: 170px;
@@ -14,6 +17,11 @@
         position: relative;
         @media (max-width: $breakpoint_md) {
             height: fit-content;
+        }
+        @media (max-width: $breakpoint_sm) {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            overflow: hidden;
         }
 
         &:before {
@@ -29,6 +37,9 @@
             @include image("analysisResult__logo.svg");
             @media (max-width: $breakpoint_md) {
                 max-width: 100%;
+            }
+            @media (max-width: $breakpoint_sm) {
+                top: 50px;
             }
         }
         
@@ -47,6 +58,10 @@
             @media (max-width: $breakpoint_lg) {
                 font-size: 50px;
             }
+            @media (max-width: $breakpoint_sm) {
+                font-size: 30px;
+                line-height: normal;
+            }
 
             @include fw(700);
 
@@ -59,12 +74,22 @@
                 background: #fff;
                 margin-top: 6px;
                 margin-bottom: 90px;
+                @media (max-width: $breakpoint_sm) {
+                    margin-bottom: 20px;
+                }
             }
         }
     }
 
     ul {
         max-width: 411px;
+        @media (max-width: $breakpoint_sm) {
+            max-width: 100%;
+            width: 100%;
+            br {
+                display: none;
+            }
+        }
         li {
             position: relative;
             left: 47px;
@@ -74,13 +99,26 @@
 
             @include fw(700);
 
+            @media (max-width: $breakpoint_sm) {
+                font-size: 20px;
+                line-height: normal;
+                left: 15px;
+                max-width: calc(100% - 15px);
+            }
             &:not(:last-child) {
                 margin-bottom: 53px;
+                @media (max-width: $breakpoint_sm) {
+                    margin-bottom: 10px;
+                }
             }
             span {
                 width: 100%;
                 display: block;
                 color: #fff;
+                @media (max-width: $breakpoint_sm) {
+                    display: inline;
+                    margin-left: 5px;
+                }
             }
 
             &:before {
@@ -93,6 +131,12 @@
                 height: 27px;
                 border-radius: 50%;
                 background: rgba(255, 201, 199, 0.75);
+                @media (max-width: $breakpoint_sm) {
+                    width: 10px;
+                    height: 10px;
+                    top: 8px;
+                    left: -20px;
+                }
             }
         }
     }

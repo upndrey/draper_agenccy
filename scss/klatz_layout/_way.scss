@@ -21,6 +21,7 @@
         margin-bottom: 68px;
         @media (max-width: $breakpoint_md) {
             font-size: 30px;
+            line-height: normal;
         }
         &:before {
             content: '';
@@ -70,6 +71,13 @@
 
                 &:not(&:last-child) {
                     margin-bottom: 40px;
+                    @media (max-width: $breakpoint_sm) {
+                        margin-bottom: 10px;
+                    }
+                }
+                @media (max-width: $breakpoint_sm) {
+                    font-size: 20px;
+                    line-height: normal;
                 }
 
             }
@@ -87,6 +95,9 @@
                 @media (max-width: $breakpoint_lg) {
                     opacity: .5;
                 }
+                @media (max-width: $breakpoint_sm) {
+                    display: none;
+                }
             }
         }
         .img {
@@ -97,6 +108,9 @@
             align-items: center;
             justify-content: center;
 
+            @media (max-width: $breakpoint_sm) {
+                max-width: 100%;
+            }
             &:before {
                 content: '';
                 width: 616px;
@@ -116,6 +130,10 @@
                 width: 521px;
                 height: 430px;
                 z-index: 2;
+                @media (max-width: $breakpoint_sm) {
+                    max-width: 100%;
+                    height: auto;
+                }
             }
         }
     }
@@ -197,7 +215,12 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 192px;
-
+        @media (max-width: $breakpoint_sm) {
+            flex-direction: column;
+            left: 0;
+            margin-top: 150px;
+            margin-bottom: 100px;
+        }
 
         p {
             max-width: 510px;
@@ -208,6 +231,12 @@
                 position: relative;
                 z-index: 2;
                 font-size: 35px;
+            }
+            @media (max-width: $breakpoint_sm) {
+                font-size: 30px;
+                line-height: normal;
+                margin-bottom: 10px;
+                text-align: center;
             }
 
             @include fw(700);
@@ -229,6 +258,9 @@
                 @media (max-width: $breakpoint_lg) {
                     width: 500px;
                 }
+                @media (max-width: $breakpoint_sm) {
+                    max-width: 100%;
+                }
             }
             &:before {
                 content: '';
@@ -248,11 +280,20 @@
             margin-bottom: 117px;
             left: -20px;
 
+            @media (max-width: $breakpoint_sm) {
+                flex-direction: column-reverse;
+                left: 0;
+            }
             p {
                 font-size: 50px;
                 @media (max-width: $breakpoint_lg) {
                     font-size: 35px;
                     margin-left: 10px;
+                }
+                @media (max-width: $breakpoint_sm) {
+                    font-size: 30px;
+                    line-height: normal;
+                    left: 0;
                 }
             }
 
@@ -274,6 +315,9 @@
         position: relative;
         margin-bottom: 150px;
         
+        @media (max-width: $breakpoint_sm) {
+            display: none;
+        }
 
         h2 {
             position: relative;
@@ -291,6 +335,10 @@
                 position: relative;
                 z-index: 2;
                 left: -6px;
+            }
+            @media (max-width: $breakpoint_sm) {
+                font-size: 30px;
+                line-height: normal;
             }
             &:before {
                 content: '';
@@ -420,6 +468,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: $breakpoint_sm) {
+            flex-direction: column;
+        }
         p {
             max-width: 674px;
             font-size: 50px;
@@ -432,6 +483,11 @@
             @media (max-width: $breakpoint_md) {
                 font-size: 30px;
             }
+            @media (max-width: $breakpoint_sm) {
+                font-size: 30px;
+                line-height: normal;
+                z-index: 3;
+            }
             &:before {
                 content: '';
                 position: absolute;
@@ -443,6 +499,9 @@
                 @include image("way__evaluation_figure.svg");
                 @media (max-width: $breakpoint_lg) {
                     opacity: .5;
+                }
+                @media (max-width: $breakpoint_sm) {
+                    display: none;
                 }
             }
         }
@@ -538,6 +597,17 @@
             line-height: 104px;
             margin-left: 49px;
             margin-bottom: 0;
+            @media (max-width: $breakpoint_sm) {
+                font-size: 30px;
+                line-height: normal;
+                margin-left: 10px;
+            }
+        }
+        
+        @media (max-width: $breakpoint_sm) {
+            img {
+                max-width: 100%;
+            }
         }
     }
 }

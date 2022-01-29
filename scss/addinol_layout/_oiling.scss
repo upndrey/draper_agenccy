@@ -34,6 +34,9 @@
             font-size: 30px;
             line-height: normal;
         }
+        @media (max-width: $breakpoint_sm) {
+            margin-left: 0;
+        }
 
         @include fw(700);
         &:first-child {

@@ -19,5 +19,10 @@
             font-size: 30px;
             line-height: normal;
         }
+        @media (max-width: $breakpoint_sm) {
+            font-size: 30px;
+            line-height: normal;
+            text-align: center;
+        }
     }
 }

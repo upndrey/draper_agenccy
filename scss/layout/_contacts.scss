@@ -6,6 +6,9 @@
     padding: 79px 106px 100px 107px;
     background: #D8D3C9;
     border-radius: 5px;
+    @media (max-width: $breakpoint_sm) {
+        padding: 15px;
+    }
     &__wrapper {
         padding-top: 120px;
         padding-bottom: 158px;
@@ -22,6 +25,9 @@
         margin-bottom: 14px;
         max-width: 800px;
         @include fw(700);
+        @media (max-width: $breakpoint_sm) {
+            font-size: 20px;
+        }
     }
 
     form {
@@ -39,6 +45,9 @@
             line-height: 25px;
             border: 0;
             @include fw(700);
+            @media (max-width: $breakpoint_sm) {
+                max-width: 100%;
+            }
         }
 
         input[type=text] {

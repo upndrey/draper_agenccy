@@ -21,6 +21,9 @@
         @media (max-width: $breakpoint_lg) {
             opacity: .3;
         }
+        @media (max-width: $breakpoint_sm) {
+            display: none;
+        }
     }
 
     &:after{ 
@@ -39,6 +42,9 @@
         @media (max-width: $breakpoint_md) {
             top: 0px;
         }
+        @media (max-width: $breakpoint_sm) {
+            opacity: .1;
+        }
     }
 
     p {
@@ -52,6 +58,9 @@
         @media (max-width: $breakpoint_md) {
             font-size: 30px;
             line-height: normal;
+        }
+        @media (max-width: $breakpoint_sm) {
+            font-size: 20px;
         }
         &:first-child {
             margin-bottom: 65px;

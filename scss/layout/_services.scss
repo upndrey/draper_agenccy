@@ -235,10 +235,16 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                @media (max-width: $breakpoint_sm) {
+                    flex-direction: column;
+                }
                 .price {
                     @include fw(700);
                     font-size: 20px;
                     line-height: 25px;
+                    @media (max-width: $breakpoint_sm) {
+                        margin-bottom: 10px;
+                    }
                 }
 
                 .btn_action {

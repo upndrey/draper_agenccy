@@ -6,6 +6,10 @@
         background: #B5E7DA;
         padding-top: 191px;
         padding-bottom: 549px;
+        @media (max-width: $breakpoint_sm) {
+            padding-top: 125px;
+            padding-bottom: 280px;
+        }
 
     }
     
@@ -39,6 +43,9 @@
         justify-content: flex-end;
         align-items: center;
         margin-bottom: 50px;
+        @media (max-width: $breakpoint_sm) {
+            flex-direction: column;
+        }
         .inst {
             display: flex;
             align-items: center;
@@ -92,6 +99,11 @@
                 line-height: normal;
                 margin-left: 42px;
             }
+            @media (max-width: $breakpoint_sm) {
+                margin-left: 0;
+                margin-top: 20px;
+                text-align: center;
+            }
         }
     }
 
@@ -136,6 +148,9 @@
         height: 570px;
         position: relative;
         border: 10px solid #FFFFFF;
+        @media (max-width: $breakpoint_sm) {
+            max-width: 100%;
+        }
         img {
             position: relative;
             display: block;
@@ -144,6 +159,14 @@
 
             width: 572px;
             height: 574px;
+            @media (max-width: $breakpoint_sm) {
+                max-width: 100%;
+                height: auto;
+                left: 0;
+                right: 0;
+                top: 5px;
+                margin: auto;
+            }
         }
         &:before {
             content: '';
@@ -154,6 +177,9 @@
             height: 625px;
 
             @include image("person__border.png");   
+            @media (max-width: $breakpoint_sm) {
+                display: none;
+            }
         }
 
         &:after {

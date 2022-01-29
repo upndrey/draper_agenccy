@@ -9,6 +9,9 @@
         @media (max-width: $breakpoint_md) {
             padding-top: 125px;
         }
+        @media (max-width: $breakpoint_sm) {
+            padding-top: 250px;
+        }
     }
 
     h2 {
@@ -21,6 +24,10 @@
         @media (max-width: $breakpoint_lg) {
             font-size: 50px;
             line-height: 70px;
+        }
+        @media (max-width: $breakpoint_sm) {
+            font-size: 30px;
+            line-height: normal;
         }
 
         @include fw(700);
@@ -40,6 +47,11 @@
         color: #FFFFFF;
 
         @include fw(700);
+        @media (max-width: $breakpoint_sm) {
+            width: 100px;
+            height: 100px;
+            font-size: 40px;
+        }
     }
 
     .content {
@@ -54,6 +66,9 @@
             &>img {
                 &:not(&:last-child) {
                     margin-bottom: 20px;
+                }
+                @media (max-width: $breakpoint_sm) {
+                    max-width: 100%;
                 }
             }
         }
@@ -90,6 +105,9 @@
                     margin: auto;
                     left: 0;
                     right: 0;
+                }
+                @media (max-width: $breakpoint_sm) {
+                    top: -70px;
                 }
     
             }
@@ -136,6 +154,10 @@
                 margin-right: 34px;
 
                 @include image("dig__closeup_logo.svg");
+                @media (max-width: $breakpoint_sm) {
+                    max-width: 100%;
+                    width: 200px;
+                }
             }
         }
     }

@@ -3,11 +3,19 @@
         padding-top: 114px;
         padding-bottom: 195px;
         background: #E7E7E7;
+        @media (max-width: $breakpoint_sm) {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
     }
 
     .title {
         margin-bottom: 36px;
         margin-left: 129px;
+        @media (max-width: $breakpoint_sm) {
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
         h2 {
             font-size: 50px;
             line-height: 140%;
@@ -16,6 +24,11 @@
             margin-bottom: 0;
 
             @include fw(700);
+            @media (max-width: $breakpoint_sm) {
+                font-size: 30px;
+                line-height: normal;
+                text-align: center;
+            }
         }
 
         p {
@@ -24,6 +37,11 @@
             line-height: 39px;
 
             @include fw(700);
+            @media (max-width: $breakpoint_sm) {
+                font-size: 20px;
+                line-height: normal;
+                text-align: center;
+            }
         }
     }
 }

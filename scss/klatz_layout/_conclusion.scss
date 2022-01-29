@@ -5,6 +5,10 @@
         padding-bottom: 180px;
         background: #F7D1DD;
         overflow: hidden;
+        @media (max-width: $breakpoint_sm) {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
     }
 
     h2 {
@@ -18,6 +22,11 @@
         @media (max-width: $breakpoint_md) {
             font-size: 40px;
             max-width: 100%;
+            text-align: center;
+        }
+        @media (max-width: $breakpoint_sm) {
+            font-size: 30px;
+            line-height: normal;
             text-align: center;
         }
     }
@@ -144,6 +153,10 @@
 
             @include fw(700);
 
+            @media (max-width: $breakpoint_sm) {
+                font-size: 20px;
+                line-height: normal;
+            }
             &:nth-child(1) {
                 width: 237px;
                 margin-bottom: 99px;
@@ -217,6 +230,11 @@
 
                 @include fw(700);
 
+                @media (max-width: $breakpoint_sm) {
+                    font-size: 20px;
+                    line-height: normal;
+                    margin-bottom: 10px;
+                }
                 &:before {
                     content: '';
                     position: absolute;

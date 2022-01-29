@@ -26,6 +26,9 @@
         margin: 0;
         margin-bottom: 28px;
         max-width: 378px;
+        @media (max-width: $breakpoint_sm) {
+            max-width: 350px !important;
+        }
         li {
             position: relative;
             left: 24px;

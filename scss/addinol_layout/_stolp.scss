@@ -43,6 +43,10 @@
                 line-height: normal;
                 margin-bottom: 10px;
             }
+            @media (max-width: $breakpoint_sm) {
+                position: relative;
+                z-index: 3;
+            }
             &:last-child {
                 line-height: 150%;
             }
