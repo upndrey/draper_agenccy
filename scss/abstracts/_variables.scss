@@ -29,6 +29,10 @@ $width_md: calc(768px + 10px)  !default;
 $breakpoint_sm: 800px !default;
 /// md container
 $width_sm: calc(100% - 20px)  !default;
+/// xs breakpoint
+$breakpoint_xs: 425px !default;
+/// xs container
+$width_xs: calc(100% - 20px)  !default;
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
