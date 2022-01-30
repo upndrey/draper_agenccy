@@ -2,40 +2,42 @@ body {
 	margin:0;
 }
 
-.fullscreen {
+.image {
 	margin:30px;
 	cursor:zoom-in;
 }
 
 .popup {
-	position: absolute;
+	position: fixed;
 	height:100%;
 	width:100%;
 	top:0;
 	left:0;
 	display:none;
 	text-align:center;
+	overflow: scroll;
 }
 
 .popup_bg {
 	background:rgba(0,0,0,0.3);
 	position:fixed;
-	z-index: 1000;
+	z-index:1000;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
 	width: auto;
-  height: auto;
+  	height: auto;
 }
 
 
 .popup_img {
-	position: fixed;
-	z-index: 1001;
-	left: 50%;
+	position: relative;
+	z-index:1002;
+	left: 0;
 	top: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(0,-50%);
+	max-height: 90%;
 }
 
 .popup_img {
