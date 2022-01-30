@@ -19,21 +19,97 @@
         }
         @media (max-width: $breakpoint_md) {
             top: 124px;
+            display: none;
         }
         @media (max-width: $breakpoint_sm) {
             display: none;
         }
     }
     .scroller {
-        align-self: flex-end;
+        //align-self: flex-end;
+        position: relative;
+        left: 200px;
         @media (max-width: $breakpoint_lg) {
-            max-width: calc(100% - 100px);
+            left: 130px;
+            max-width: calc(100% - 150px);
         }
-        @media (max-width: $breakpoint_sm) {
+        @media (max-width: $breakpoint_md) {
             max-width: 100%;
+            left: 0;
+        }
+
+        .slick-arrow {
+            position: absolute !important;
+            bottom: -40px !important;
+        }
+        .slick-prev {
+            left: 0;
+            background: transparent;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            height: 36px;
+            color: transparent;
+            &:before {
+                content: '\27A4';
+                display: block;
+                font-size: 30px;
+                color: #000;
+                transform: rotate(180deg);
+                @include fw(700);
+                position: relative;
+                left: -15px;
+            }
+        }
+        .slick-next {
+            left: 225px;
+            background: transparent;
+            border: 0;
+            color: transparent;
+            @media (max-width: $breakpoint_md) {
+                left: auto;
+                right: 0;
+            }
+            &:after {
+                content: '\27A4';
+                font-size: 30px;
+                color: #000;
+                @include fw(700);
+            }
+        }
+        .slick-dots {
+            position: absolute !important;
+            bottom: -43px !important;
+            left: 100px;
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: $breakpoint_md) {
+                left: 0;
+                right: 0;
+                margin: auto;
+                bottom: -25px !important;
+            }
+            &>li {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 1px solid black;
+                color: transparent;
+                background: transparent;
+
+                &.slick-active {
+                    background: #000;
+                }
+                &>button {
+                    display: none;
+                }
+            }
+        }
+        .slick-list {
+            padding-top: 0;
         }
         img {
-            
             @media (max-width: $breakpoint_lg) {
                 max-width: 100%;
             }
