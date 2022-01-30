@@ -5,64 +5,56 @@ function main() {
 
     const services = new Services();
     services.init();
+
+    const fullscreenImage = new FullscreenImage();
+    fullscreenImage.init();
 }
 
 function Burger() {
+}
+
+Burger.prototype.init = function() {
     let burgerDom = document.querySelector(".burger");
     let mobileNavDom = document.querySelector(".mobileNav__wrapper");
     burgerDom.addEventListener("click", () => {
         burgerDom.classList.toggle("active");
         mobileNavDom.classList.toggle("hidden");
     });
+};
 
-}
 
-Burger.prototype.init = function() {
+
+function FullscreenImage() {
 
 };
 
+FullscreenImage.prototype.init = function() {
+    $(".fullscreen").click(function(){	// Событие клика на маленькое изображение
+        var img = $(this);	// Получаем изображение, на которое кликнули
+      var src = img.attr('src'); // Достаем из этого изображения путь до картинки
+      $("body").append("<div class='popup'>"+ //Добавляем в тело документа разметку всплывающего окна
+                       "<div class='popup_bg'></div>"+ // Блок, который будет служить фоном затемненным
+                       "<img src='"+src+"' class='popup_img' />"+ // Само увеличенное фото
+                       "</div>");
+      $(".popup").fadeIn(200); // Медленно выводим изображение
+      $(".popup_bg").click(function(){	// Событие клика на затемненный фон	   
+          $(".popup").fadeOut(200);	// Медленно убираем всплывающее окн	
+    setTimeout(function() {	// Выставляем таймер
+            $(".popup").remove(); // Удаляем разметку всплывающего окна
+          }, 200);
+      });
+  });
+}
+
+
 function Services() {
-    this.brandStrategyLink = document.getElementById("brandStrategyLink");
-    this.markStrategyLink = document.getElementById("markStrategyLink");
-    this.markAnalysisLink = document.getElementById("markAnalysisLink");
-    this.markTzLink = document.getElementById("markTzLink");
-    this.creativeStrategyLink = document.getElementById("creativeStrategyLink");
-    this.brandStrategy = document.getElementById("brandStrategy");
-    this.markStrategy = document.getElementById("markStrategy");
-    this.markAnalysis = document.getElementById("markAnalysis");
-    this.markTz = document.getElementById("markTz");
-    this.creativeStrategy = document.getElementById("creativeStrategy");
-    
-    this.currentActiveLink = this.brandStrategyLink;
-    this.currentActive = this.brandStrategy;
 }
 
 Services.prototype.init = function() {
-    this.slick();
-    this.brandStrategyLink.addEventListener(
-        "click", 
-        this.switchActive.bind(this, this.brandStrategyLink)
-    ); 
-    this.markStrategyLink.addEventListener(
-        "click", 
-        this.switchActive.bind(this, this.markStrategyLink)
-    ); 
-    this.markAnalysisLink.addEventListener(
-        "click", 
-        this.switchActive.bind(this, this.markAnalysisLink)
-    ); 
-    this.markTzLink.addEventListener(
-        "click", 
-        this.switchActive.bind(this, this.markTzLink)
-    ); 
-    this.creativeStrategyLink.addEventListener(
-        "click", 
-        this.switchActive.bind(this, this.creativeStrategyLink)
-    ); 
+    //this.slick();
 };
 
 Services.prototype.slick = function() {
-    if ($(window).width() <= 990) {
         $('.slick').slick({
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -88,7 +80,6 @@ Services.prototype.slick = function() {
                     break;
             }
         });
-    } 
 }
 
 Services.prototype.switchActive = function(currentLink) {
