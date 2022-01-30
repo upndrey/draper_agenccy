@@ -3,9 +3,6 @@ function main() {
     const burger = new Burger();
     burger.init();
 
-    const slick = new Slick();
-    slick.init();
-
     const services = new Services();
     services.init();
 }
@@ -23,20 +20,6 @@ function Burger() {
 Burger.prototype.init = function() {
 
 };
- 
-function Slick() {
-    
-}
-
-Slick.prototype.init = function() {
-    if ($(window).width() <= 990) {
-        $('.slick').slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-        });
-    } 
-}
 
 function Services() {
     this.brandStrategyLink = document.getElementById("brandStrategyLink");
@@ -55,6 +38,7 @@ function Services() {
 }
 
 Services.prototype.init = function() {
+    this.slick();
     this.brandStrategyLink.addEventListener(
         "click", 
         this.switchActive.bind(this, this.brandStrategyLink)
@@ -75,47 +59,37 @@ Services.prototype.init = function() {
         "click", 
         this.switchActive.bind(this, this.creativeStrategyLink)
     ); 
-
-    $('.slick-next').click(() => {
-        switch(this.currentActiveLink) {
-            case this.brandStrategyLink:
-                this.switchActive(this.markStrategyLink);
-                break;
-            case this.markStrategyLink:
-                this.switchActive(this.markAnalysisLink);
-                break;
-            case this.markAnalysisLink:
-                this.switchActive(this.markTzLink);
-                break;
-            case this.markTzLink:
-                this.switchActive(this.creativeStrategyLink);
-                break;
-            case this.creativeStrategyLink:
-                this.switchActive(this.brandStrategyLink);
-                break;
-        }
-    });
-
-    $('.slick-prev').click(() => {
-        switch(this.currentActiveLink) {
-            case this.brandStrategyLink:
-                this.switchActive(this.creativeStrategyLink);
-                break;
-            case this.markStrategyLink:
-                this.switchActive(this.brandStrategyLink);
-                break;
-            case this.markAnalysisLink:
-                this.switchActive(this.markStrategyLink);
-                break;
-            case this.markTzLink:
-                this.switchActive(this.markAnalysisLink);
-                break;
-            case this.creativeStrategyLink:
-                this.switchActive(this.markTzLink);
-                break;
-        }
-    });
 };
+
+Services.prototype.slick = function() {
+    if ($(window).width() <= 990) {
+        $('.slick').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        });
+        $('.slick').on('afterChange', (event, slick, currentSlide, nextSlide) => {
+            console.log(currentSlide);
+            switch(currentSlide) {
+                case 0:
+                    this.switchActive(this.brandStrategyLink);
+                    break;
+                case 1:
+                    this.switchActive(this.markStrategyLink);
+                    break;
+                case 2:
+                    this.switchActive(this.markAnalysisLink);
+                    break;
+                case 3:
+                    this.switchActive(this.markTzLink);
+                    break;
+                case 4:
+                    this.switchActive(this.creativeStrategyLink);
+                    break;
+            }
+        });
+    } 
+}
 
 Services.prototype.switchActive = function(currentLink) {
     if(currentLink != this.currentActiveLink) {
