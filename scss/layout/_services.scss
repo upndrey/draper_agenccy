@@ -80,6 +80,9 @@
                 color: #fff;
                 z-index: 2;
                 overflow: hidden;
+                @media (max-width: $breakpoint_md) {
+                    display: none;
+                }
                 &:before {
                     content: '';
                     position: absolute;
@@ -97,6 +100,8 @@
                 border: 2.2px solid transparent;
                 @media (max-width: $breakpoint_md) {
                     min-height: 156px;
+                    margin-left: 50px;
+                    margin-right: 50px;
                 }
                 @media (max-width: $breakpoint_sm) {
                     min-height: 109px;
@@ -241,6 +246,10 @@
                     }
                     &:first-child {
                         margin-right: 10px;
+                        @media (max-width: $breakpoint_md) {
+                            margin-right: 0;
+                        }
+                
                     }
 
                     &:last-child {
@@ -374,7 +383,7 @@
             margin: 0 10px;
             .active {
                 min-height: fit-content;
-                padding: 10px;
+                padding: 15px;
                 @media (max-width: $breakpoint_md) {
                     min-height: 409px;
                 }
@@ -382,6 +391,7 @@
                     margin-bottom: 15px;
                     font-size: 20px;
                     line-height: normal;
+                    
                 }
                 &>.text {
                     min-height: fit-content;
@@ -391,8 +401,25 @@
                         flex-direction: column;
                         align-items: center;
                     }
+                    li>.title {
+                        &.hasText {
+                            position: relative;
+                            &:before {
+                                content: '\27A4';
+                                position: absolute;
+                                transition: .5s;
+                                font-size: 10px;
+                                left: -10px;
+                            }
+                        }
+                        &.rotated {
+                            &:before {
+                                transform: rotate(90deg);
+                            }
+                        }
+                    }
 
-                    li>.text {
+                    li>.text.hidden {
                         display: none;
                     }
                 }

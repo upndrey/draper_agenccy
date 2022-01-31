@@ -1,10 +1,14 @@
 document.addEventListener("DOMContentLoaded", main);
 function main() {
+    const nav = new Nav();
+    nav.init();
+
     const burger = new Burger();
     burger.init();
 
     const services = new Services();
     services.init();
+
 }
 
 function Burger() {
@@ -19,6 +23,77 @@ Burger.prototype.init = function() {
     });
 };
 
+function Nav() {
+
+};
+
+Nav.prototype.init = function() {
+    
+  let currentActiveLink = ".servicesLink";
+  $(".servicesLink").click(function(e) {
+    e.preventDefault();
+    if(currentActiveLink && currentActiveLink !== ".servicesLink")
+      document.querySelectorAll(currentActiveLink).forEach((elem) => {
+        elem.classList.remove("active");
+      });
+    currentActiveLink = ".servicesLink";
+    $(".servicesLink").addClass("active");
+    $(".mobileNav__wrapper").addClass("hidden");
+    $(".nav .nav__right .burger").removeClass("active");
+
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#services").offset().top
+    }, 2000);
+  });
+
+  $(".casesLink").click(function(e) {
+    e.preventDefault();
+    if(currentActiveLink && currentActiveLink !== ".casesLink")
+      document.querySelectorAll(currentActiveLink).forEach((elem) => {
+        elem.classList.remove("active");
+      });
+    currentActiveLink = ".casesLink";
+    $(".casesLink").addClass("active");
+    $(".mobileNav__wrapper").addClass("hidden");
+    $(".nav .nav__right .burger").removeClass("active");
+
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#cases").offset().top - 100
+    }, 2000);
+  });
+
+  $(".teamLink").click(function(e) {
+    e.preventDefault();
+    if(currentActiveLink && currentActiveLink !== ".teamLink")
+      document.querySelectorAll(currentActiveLink).forEach((elem) => {
+        elem.classList.remove("active");
+      });
+    currentActiveLink = ".teamLink";
+    $(".teamLink").addClass("active");
+    $(".mobileNav__wrapper").addClass("hidden");
+    $(".nav .nav__right .burger").removeClass("active");
+
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#team").offset().top - 100
+    }, 2000);
+  });
+
+  $(".contactsLink").click(function(e) {
+    e.preventDefault();
+    if(currentActiveLink && currentActiveLink !== ".contactsLink")
+      document.querySelectorAll(currentActiveLink).forEach((elem) => {
+        elem.classList.remove("active");
+      });
+    currentActiveLink = ".contactsLink";
+    $(".contactsLink").addClass("active");
+    $(".mobileNav__wrapper").addClass("hidden");
+    $(".nav .nav__right .burger").removeClass("active");
+
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#contacts").offset().top
+    }, 2000);
+  });
+}
 
 function Services() {
     this.brandStrategyLink = document.getElementById("brandStrategyLink");
@@ -86,6 +161,12 @@ Services.prototype.slick = function() {
                     this.switchActive(this.creativeStrategyLink);
                     break;
             }
+        });
+        $('.slick__elem ul>li>.title').click((e) => {
+            console.log(e.target.nextElementSibling);
+            e.target.classList.toggle("rotated");
+            if(e.target.nextElementSibling)
+                e.target.nextElementSibling.classList.toggle("hidden");    
         });
     } 
 }

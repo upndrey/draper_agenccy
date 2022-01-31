@@ -14,15 +14,15 @@
             <div class="nav__left">
                 <a href="./index.html" class="nav__logo"></a>
                 <ul class="nav__list">
-                    <li>Услуги</li>
-                    <li>Кейсы</li>
-                    <li>Команда</li>
-                    <li>Контакты</li>
+                    <li class="servicesLink"><a href="./index.html#services">Услуги</a></li>
+                    <li class="casesLink"><a href="./index.html#cases">Кейсы</a></li>
+                    <li class="teamLink"><a href="./index.html#team">Команда</a></li>
+                    <li class="contactsLink"><a href="./index.html#contacts">Контакты</a></li>
                 </ul>
             </div>
             <div class="nav__right">
-                <div class="phone">8 (499) 130-05-88</div>
-                <div class="btn">Сотрудничать</div>
+                <a href="tel:+74991300588" class="phone">8 (499) 130-05-88</a>
+                <a href="contactsLink" class="btn">Сотрудничать</a>
 				<div class="burger">
 					<div class="burger__icon"></div>
 				</div>
@@ -30,11 +30,11 @@
         </div>
 		<div class="mobileNav__wrapper hidden">
 			<ul>
-                <li>8 (499) 130-05-88</li>
-                <li>Услуги</li>
-                <li>Кейсы</li>
-                <li>Команда</li>
-                <li>Контакты</li>
+                <li><a href="tel:+74991300588">8 (499) 130-05-88</a></li>
+                <li class="servicesLink"><a href="./index.html#services">Услуги</a></li>
+                <li class="casesLink"><a href="./index.html#cases">Кейсы</a></li>
+                <li class="teamLink"><a href="./index.html#team">Команда</a></li>
+                <li class="contactsLink"><a href="./index.html#contacts">Контакты</a></li>
 			</ul>
 		</div>
     </div>
@@ -49,10 +49,10 @@
             <p class="header__p">
                 с честными ценами, сжатыми сроками и опытом сотрудничества с агентствами
             </p>
-            <div class="btn btn_action">Оставить заявку</div>
+            <div class="btn btn_action contactsLink">Оставить заявку</div>
         </div>
     </div>
-    <div class="services__wrapper wrapper">
+    <div class="services__wrapper wrapper" id="services">
         <div class="services container">
             <h2>Услуги</h2>
             <div>
@@ -414,8 +414,8 @@
                                         <p class="title">CJM</p>
                                     </li>
                                     <li>
-                                        <p class="title">Анализ ЦА</p>
-                                        <p class="text">
+                                        <p class="title hasText">Анализ ЦА</p>
+                                        <p class="text hidden">
                                             Сегментирование: карты эмпатии, censydiam, 5W Шеррингтона, инсайты, персоны, JTBD и матрица потребностей. 
                                             <br>Проведение качественных и количественных исследований
                                         </p>
@@ -431,34 +431,34 @@
                                         </p>
                                     </li>
                                     <li>
-                                        <p class="title">
+                                        <p class="title hasText">
                                             Платформа бренда
                                         </p>
-                                        <p class="text">
+                                        <p class="text hidden">
                                             Позиционирование, инсайты, RTB, суть, архетип, пирамида бренда
                                         </p>
                                     </li>
                                     <li>
-                                        <p class="title">
+                                        <p class="title hasText">
                                             Коммуникационная стратегия
                                         </p>
-                                        <p class="text">
+                                        <p class="text hidden">
                                             Ключевое сообщение, ToV
                                         </p>
                                     </li>
                                     <li>
-                                        <p class="title">
+                                        <p class="title hasText">
                                             Креативная стратегия
                                         </p>
-                                        <p class="text">
+                                        <p class="text hidden">
                                             Big idea, метафора бренда, идеи рекламной реализации
                                         </p>
                                     </li>
                                     <li>
-                                        <p class="title">
+                                        <p class="title hasText">
                                             Реализация стратегии
                                         </p>
-                                        <p class="text">
+                                        <p class="text hidden">
                                             Подготовка инфраструктуры (сайты, соц. сети, рекламные носители), айдентика, видепроизводство, ведение РК
                                         </p>
                                     </li>
@@ -492,8 +492,8 @@
                                         <p class="title">CJM</p>
                                     </li>
                                     <li>
-                                        <p class="title">Анализ ЦА</p>
-                                        <p class="text">
+                                        <p class="title hasText">Анализ ЦА</p>
+                                        <p class="text hidden">
                                             Сегментирование: карты эмпатии, censydiam, 5W Шеррингтона, инсайты, персоны, JTBD и матрица потребностей. 
                                             <br>Проведение качественных и количественных исследований
                                         </p>
@@ -514,10 +514,10 @@
                                         </p>
                                     </li>
                                     <li>
-                                        <p class="title">
+                                        <p class="title hasText">
                                             Реализация стратегии
                                         </p>
-                                        <p class="text">
+                                        <p class="text hidden">
                                             Подготовка инфраструктуры (сайты, соц. сети, рекламные носители), айдентика, видепроизводство, ведение РК
                                         </p>
                                     </li>
@@ -547,8 +547,8 @@
                                         <p class="title">Помощь в формировании маркетинговых целей</p>
                                     </li>
                                     <li>
-                                        <p class="title">Анализ вводных по компании без проведения исследований:</p>
-                                        <p class="text">
+                                        <p class="title hasText">Анализ вводных по компании без проведения исследований:</p>
+                                        <p class="text hidden">
                                             сбор имеющихся данных от клиента и кабинетный сбор данных из открытого доступа: описание сильных и слабых сторон компании, анализ текущих активностей, агрегирование данных о ЦА, конкурентах и спросе
                                         </p>
                                     </li>
@@ -587,8 +587,8 @@
                                         <p class="title">Брифование клиента</p>
                                     </li>
                                     <li>
-                                        <p class="title">Анализ вводных по компании без проведения исследований:</p>
-                                        <p class="text">
+                                        <p class="title hasText">Анализ вводных по компании без проведения исследований:</p>
+                                        <p class="text hidden">
                                             сбор имеющихся данных от клиента и кабинетный сбор данных из открытого доступа: описание сильных и слабых сторон компании, анализ текущих активностей, агрегирование данных о ЦА, конкурентах и спросе
                                         </p>
                                     </li>
@@ -601,10 +601,10 @@
                                         </p>
                                     </li>
                                     <li>
-                                        <p class="title">
+                                        <p class="title hasText">
                                             Проработка страниц сайта
                                         </p>
-                                        <p class="text">
+                                        <p class="text hidden">
                                             Описание контентных особенностей страниц с учетом ожиданий пользователей и отстройки от конкурентов
                                         </p>
                                     </li>
@@ -634,18 +634,18 @@
                                         <p class="title">Помощь в формировании маркетинговых целей рекламной кампании</p>
                                     </li>
                                     <li>
-                                        <p class="title">Анализ вводных по компании без проведения исследований:</p>
-                                        <p class="text">
+                                        <p class="title hasText">Анализ вводных по компании без проведения исследований:</p>
+                                        <p class="text hidden">
                                             сбор имеющихся данных от клиента и кабинетный сбор данных из открытого доступа: описание сильных и слабых сторон компании, анализ текущих активностей, агрегирование данных о ЦА, конкурентах и спросе
                                         </p>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li>
-                                        <p class="title">
+                                        <p class="title hasText">
                                             Коммуникационная стратегия
                                         </p>
-                                        <p class="text">
+                                        <p class="text hidden">
                                             Ключевое сообщение, ToV
                                         </p>
                                     </li>
@@ -655,18 +655,18 @@
                                         </p>
                                     </li>
                                     <li>
-                                        <p class="title">
+                                        <p class="title hasText">
                                             Креативная стратегия
                                         </p>
-                                        <p class="text">
+                                        <p class="text hidden">
                                             Big idea, метафора бренда, идеи рекламной реализации
                                         </p>
                                     </li>
                                     <li>
-                                        <p class="title">
+                                        <p class="title hasText">
                                             Реализация стратегии, спецпроекты
                                         </p>
-                                        <p class="text">
+                                        <p class="text hidden">
                                             Предпродакшн, реализация, постпродакшн
                                         </p>
                                     </li>
@@ -686,7 +686,7 @@
             </div>
         </div>
     </div>
-    <div class="klatz__wrapper wrapper">
+    <div class="klatz__wrapper wrapper" id="cases">
         <div class="klatz container">
             <h2>Наши кейсы</h2>
             <div>
@@ -740,7 +740,7 @@
             </div>
         </div>
     </div>
-    <div class="contacts__wrapper wrapper">
+    <div class="contacts__wrapper wrapper" id="contacts">
         <div class="contacts">
             <p>
                 Чаще всего мы работаем по принципу субподряда с агентствами. Поэтому большая часть реализованных проектов у нас под NDA. 
@@ -761,7 +761,7 @@
             <div class="contacts__img"></div>
         </div>
     </div>
-    <div class="team__wrapper wrapper">
+    <div class="team__wrapper wrapper" id="team">
         <div class="team container">
             <h2>Наша команда, готовая помочь<br>с проектом</h2>
             <div class="team__list">
@@ -814,14 +814,14 @@
             <div class="footer__left">
                 <a href="./index.html" class="footer__logo"></a>
                 <ul class="footer__list">
-                    <li>Услуги</li>
-                    <li>Кейсы</li>
-                    <li>Команда</li>
-                    <li>Контакты</li>
+                    <li class="servicesLink"><a href="./index.html#services">Услуги</a></li>
+                    <li class="casesLink"><a href="./index.html#cases">Кейсы</a></li>
+                    <li class="teamLink"><a href="./index.html#team">Команда</a></li>
+                    <li class="contactsLink"><a href="./index.html#contacts">Контакты</a></li>
                 </ul>
             </div>
             <div class="footer__right">
-                <div class="phone">8 (499) 130-05-88</div>
+                <a href="tel:+74991300588" class="phone">8 (499) 130-05-88</a>
             </div>
         </div>
     </div>
