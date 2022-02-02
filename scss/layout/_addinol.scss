@@ -9,6 +9,9 @@
         padding-bottom: 307px;
         overflow: hidden;
         background: rgba(211, 179, 134, .5);
+        @media (max-width: $breakpoint_md) {
+            padding-top: 75px;
+        }
     }
 
     &__oil {

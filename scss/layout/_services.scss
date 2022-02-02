@@ -1,6 +1,10 @@
 .services {
     padding-top: 134px;
     padding-bottom: 169px;
+    @media (max-width: $breakpoint_md) {
+        padding-bottom: 50px;
+        padding-top: 75px;
+    }
     &__wrapper {
         background: rgba(211, 179, 134, 0.5);
     }
