@@ -165,26 +165,44 @@
                     }
                     &:nth-child(1) {
                         background: #073F94;
+                        img {
+                            max-height: 51px;
+                        }
                     }
 
                     &:nth-child(2) {
                         background: #FFFFFF;
+                        img {
+                            max-height: 30px;
+                        }
                     }
 
                     &:nth-child(3) {
                         background: #FFFFFF;
+                        img {
+                            max-height: 39px;
+                        }
                     }
 
                     &:nth-child(4) {
                         background: #014171;
+                        img {
+                            max-height: 56px;
+                        }
                     }
 
                     &:nth-child(5) {
                         background: #FFFFFF;
+                        img {
+                            max-height: 47px;
+                        }
                     }
 
                     &:nth-child(6) {
                         background: #FFFFFF;
+                        img {
+                            max-height: 33.5px;
+                        }
                     }
                 }
             }
