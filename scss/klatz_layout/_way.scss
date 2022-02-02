@@ -5,6 +5,9 @@
         background: #6050CE;
         position: relative;
         overflow: hidden;
+        @media (max-width: $breakpoint_md) {
+            padding-bottom: 120px;
+        }
     }
 
     h2 {
@@ -74,6 +77,9 @@
                     @media (max-width: $breakpoint_sm) {
                         margin-bottom: 10px;
                     }
+                }
+                @media (max-width: $breakpoint_md) {
+                    @include fw(400);
                 }
                 @media (max-width: $breakpoint_sm) {
                     font-size: 20px;
@@ -232,6 +238,9 @@
                 z-index: 2;
                 font-size: 35px;
             }
+            @media (max-width: $breakpoint_md) {
+                @include fw(400);
+            }
             @media (max-width: $breakpoint_sm) {
                 font-size: 30px;
                 line-height: normal;
@@ -274,6 +283,38 @@
     
                 @include image("way__start.svg");
             }
+            
+            @media (max-width: $breakpoint_md) {
+                &:before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    top: calc(50% - 30px);
+
+                    width: 60px;
+                    height: 60px;
+                    background: #fff;
+                    border-radius: 50%;
+                    z-index: 4;
+                    opacity: 1;
+                    border: 1px solid #000;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    top: calc(50% - 15px);
+
+                    width: 30px;
+                    height: 30px;
+                    z-index: 5;
+                    @include image("zoom.png");
+                }
+            }
         }
 
         &_reverse {
@@ -307,6 +348,39 @@
                 &:before {
                     display: none;
                 }
+                
+            @media (max-width: $breakpoint_md) {
+                &:before{
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    top: calc(50% - 30px);
+
+                    width: 60px;
+                    height: 60px;
+                    background: #fff;
+                    border-radius: 50%;
+                    z-index: 4;
+                    opacity: 1;
+                    border: 1px solid #000;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    top: calc(50% - 15px);
+
+                    width: 30px;
+                    height: 30px;
+                    z-index: 5;
+                    @include image("zoom.png");
+                }
+            }
             }
         }
     }
@@ -482,6 +556,7 @@
 
             @media (max-width: $breakpoint_md) {
                 font-size: 30px;
+                @include fw(400);
             }
             @media (max-width: $breakpoint_sm) {
                 font-size: 30px;

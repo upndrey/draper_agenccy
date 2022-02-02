@@ -1,6 +1,9 @@
 .popular {
     position: relative;
     padding-bottom: 121px;
+    @media (max-width: $breakpoint_md) {
+        padding-bottom: 75px;
+    }
     &__wrapper {
         padding-top: 124px;
         background: #F1F58F;
@@ -33,6 +36,7 @@
         }
         @media (max-width: $breakpoint_md) {
             font-size: 30px;
+            @include fw(400);
             line-height: normal;
         }
         @media (max-width: $breakpoint_sm) {

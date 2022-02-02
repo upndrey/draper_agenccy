@@ -61,6 +61,7 @@
 
             @media (max-width: $breakpoint_md) {
                 font-size: 20px;
+                @include fw(400);
             }
             @media (max-width: $breakpoint_sm) {
                 line-height: normal;

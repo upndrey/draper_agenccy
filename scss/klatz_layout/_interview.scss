@@ -5,6 +5,9 @@
         padding-top: 231px;
         padding-bottom: 110px;
         background: #fff;
+        @media (max-width: $breakpoint_md) {
+            padding-top: 100px;
+        }
     }
 
     p {
@@ -16,12 +19,11 @@
 
         @include fw(700);
         @media (max-width: $breakpoint_md) {
-            font-size: 30px;
+            font-size: 24px;
+            @include fw(400);
             line-height: normal;
         }
         @media (max-width: $breakpoint_sm) {
-            font-size: 30px;
-            line-height: normal;
             text-align: center;
         }
     }

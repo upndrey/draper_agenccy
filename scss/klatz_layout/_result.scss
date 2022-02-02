@@ -46,6 +46,7 @@
         @media (max-width: $breakpoint_md) {
             font-size: 30px;
             line-height: normal;
+            @include fw(400);
         }
         @media (max-width: $breakpoint_sm) {
             font-size: 20px;
@@ -125,6 +126,7 @@
                 @media (max-width: $breakpoint_md) {
                     font-size: 30px;
                     line-height: normal;
+                    @include fw(400);
                 }
                 @media (max-width: $breakpoint_sm) {
                     font-size: 20px;
@@ -197,6 +199,9 @@
 
                 span {
                     border-bottom: 1px solid rgba(250, 221, 185, 0.75);;
+                }
+                @media (max-width: $breakpoint_md) {
+                    @include fw(400);
                 }
 
                 &:before {

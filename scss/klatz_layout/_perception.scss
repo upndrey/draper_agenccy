@@ -3,6 +3,9 @@
     top: 139px;
     left: 0;
     right: 0;
+    @media (max-width: $breakpoint_md) {
+        top: 100px;
+    }
     @media (max-width: $breakpoint_sm) {
         position: relative;
     }
@@ -60,6 +63,7 @@
         margin-bottom: 59px;
         @media (max-width: $breakpoint_md) {
             font-size: 30px;
+            @include fw(400);
         }
         @media (max-width: $breakpoint_sm) {
             font-size: 20px;

@@ -8,6 +8,10 @@
         padding-bottom: 210px;
         background: rgba(209, 199, 255, 0.8);
 
+        @media (max-width: $breakpoint_md) {
+            padding-top: 170px;
+            padding-bottom: 170px;
+        }
         &:before {
             content: '';
             z-index: 1;
@@ -95,6 +99,9 @@
             color: #B89136;
 
             @include fw(700);
+            @media (max-width: $breakpoint_md) {
+                @include fw(400);
+            }
             @media (max-width: $breakpoint_sm) {
                 font-size: 20px;
                 line-height: normal;
@@ -396,5 +403,8 @@
         text-align: center;
         color: #001429;
         border: 0;
+        @media (max-width: $breakpoint_md) {
+            max-width: 100%;
+        }
     }
 }

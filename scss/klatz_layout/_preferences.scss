@@ -9,6 +9,10 @@
         background: #6050CE;
         overflow: hidden;
 
+        @media (max-width: $breakpoint_md) {
+            padding-top: 100px;
+            padding-bottom: 120px;
+        }
         &:before {
             content: '';
             position: absolute;
@@ -37,6 +41,10 @@
         margin-bottom: 60px;
         position: relative;
         z-index: 8;
+        @media (max-width: $breakpoint_sm) {
+            @include fw(400);
+            margin-bottom: 20px;
+        }
         @media (max-width: $breakpoint_sm) {
             font-size: 30px;
             line-height: normal;

@@ -12,6 +12,8 @@
 
         @media (max-width: $breakpoint_md) {
             height: fit-content;
+            padding-top: 100px;
+            padding-bottom: 100px;
         }
         &:before {
             content: '';
@@ -34,6 +36,7 @@
         @include fw(700);
         @media (max-width: $breakpoint_md) {
             font-size: 35px;
+            @include fw(400);
             line-height: normal;
         }
         @media (max-width: $breakpoint_sm) {
@@ -48,6 +51,9 @@
         margin-bottom: 36px;
 
         @include fw(700);
+        @media (max-width: $breakpoint_md) {
+            @include fw(400);
+        }
         @media (max-width: $breakpoint_sm) {
             font-size: 20px;
             line-height: normal;
@@ -73,6 +79,9 @@
             margin-bottom: 25px;
 
             @include fw(700);
+            @media (max-width: $breakpoint_md) {
+                @include fw(400);
+            }
             @media (max-width: $breakpoint_sm) {
                 font-size: 30px;
                 line-height: normal;

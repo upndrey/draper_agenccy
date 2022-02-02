@@ -8,6 +8,9 @@
         max-height: 821px;
         box-sizing: border-box;
         background: #E7E7E7;
+        @media (max-width: $breakpoint_md) {
+            padding-top: 100px;
+        }
         &:before {
             content: '';
             position: absolute;

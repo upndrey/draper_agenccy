@@ -5,9 +5,13 @@
     z-index: 1;
     background: #0C090D;
 
+    @media (max-width: $breakpoint_md) {
+    }
     @media (max-width: $breakpoint_sm) {
         height: fit-content;
+        padding-top: 180px;
         padding-bottom: 0;
+        overflow: hidden;
     }
 
     &:before {
@@ -61,6 +65,7 @@
                 position: relative;
                 font-size: 30px;
                 z-index: 3;
+                @include fw(400);
             }
             @media (max-width: $breakpoint_sm) {
                 font-size: 20px;

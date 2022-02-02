@@ -99,6 +99,9 @@
 
             @include fw(700);
 
+            @media (max-width: $breakpoint_md) {
+                @include fw(400);
+            }
             @media (max-width: $breakpoint_sm) {
                 font-size: 20px;
                 line-height: normal;
