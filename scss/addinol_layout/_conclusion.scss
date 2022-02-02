@@ -5,6 +5,10 @@
         padding-top: 120px;
         padding-bottom: 127px;
         background: #8E5572;
+        @media (max-width: $breakpoint_md) {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
     }
 
     &__title {
@@ -99,6 +103,7 @@
 
         @media (max-width: $breakpoint_md) {
             font-size: 30px;
+            @include fw(400);
             line-height: normal;
         }
         &:before {

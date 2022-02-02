@@ -6,6 +6,9 @@
         padding-bottom: 278px;
         background: rgba(211, 179, 134, 0.5);
 
+        @media (max-width: $breakpoint_md) {
+            padding-top: 75px;
+        }
         &:after {
             content: '';
             position: absolute;

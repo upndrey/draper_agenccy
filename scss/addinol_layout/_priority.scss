@@ -6,6 +6,10 @@
         padding-bottom: 94px;
         background: #EDDEA4;
         overflow: hidden;
+        @media (max-width: $breakpoint_md) {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
     }
 
     &>p {
@@ -109,6 +113,9 @@
 
                 @include fw(700);
 
+                @media (max-width: $breakpoint_md) {
+                    @include fw(400);
+                }
                 &:not(:last-child) {
                     margin-bottom: 20px;
                 }

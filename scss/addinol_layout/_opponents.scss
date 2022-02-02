@@ -57,6 +57,7 @@
         @media (max-width: $breakpoint_md) {
             margin-right: 0;
             margin-bottom: 30px;
+            margin-top: 0;
             width: 510px;
             max-width: 100%;
         }
@@ -80,6 +81,7 @@
             @include fw(700);
 
             @media (max-width: $breakpoint_md) {
+                @include fw(400);
                 font-size: 30px;
                 line-height: normal;
             }

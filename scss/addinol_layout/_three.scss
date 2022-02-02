@@ -5,6 +5,9 @@
         padding-top: 120px;
         padding-bottom: 324px;
         background: #5E4B56;
+        @media (max-width: $breakpoint_md) {
+            padding-top: 75px;
+        }
     }
 
     &>p {
@@ -142,6 +145,9 @@
                 color: #DFDFDF;
 
                 @include fw(700);
+                @media (max-width: $breakpoint_md) {
+                    @include fw(400);
+                }
             }
 
             &:nth-child(2) {

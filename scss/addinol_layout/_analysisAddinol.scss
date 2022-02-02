@@ -73,14 +73,15 @@
         line-height: 140%;
         color: #FFFFFF;
 
+        @include fw(700);
+        margin-bottom: 108px;
         @media (max-width: $breakpoint_lg) {
             left: 0;
         }
         @media (max-width: $breakpoint_md) {
             font-size: 24px;
+            @include fw(400);
         }
-        @include fw(700);
-        margin-bottom: 108px;
 
         &:before {
             content: '';
@@ -165,6 +166,9 @@
 
             @include fw(700);
             
+            @media (max-width: $breakpoint_md) {
+                @include fw(400);
+            }
             &.first {
                 margin-bottom: 20px;
             }
@@ -199,6 +203,7 @@
         margin-left: 5px;
 
         @media (max-width: $breakpoint_md) {
+            @include fw(400);
             &>br {
                 display: none;
             }

@@ -2,6 +2,9 @@
     z-index: 5;
     position: relative;
     padding-top: 232px;
+    @media (max-width: $breakpoint_md) {
+        padding-top: 150px;
+    }
     &:before {
         content: '';
         width: 866px;

@@ -5,6 +5,9 @@
         padding-top: 120px;
         padding-bottom: 157px;
         background: #e9e1ca;
+        @media (max-width: $breakpoint_md) {
+            padding-top: 75px;
+        }
     }
 
     &:after {
@@ -68,6 +71,7 @@
                 @media (max-width: $breakpoint_md) {
                     font-size: 20px;
                     line-height: normal;
+                    @include fw(400);
                 }
                 &:first-child {
                     margin-bottom: 30px;

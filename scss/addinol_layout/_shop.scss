@@ -3,6 +3,10 @@
         padding-top: 120px;
         padding-bottom: 120px;
         background: #F1F58F;
+        @media (max-width: $breakpoint_md) {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
     }
 
     p {

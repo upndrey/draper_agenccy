@@ -6,6 +6,10 @@
         @media (max-width: $breakpoint_lg) {
             overflow: hidden;
         }
+        @media (max-width: $breakpoint_md) {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
     }
 
     &>p {
@@ -69,6 +73,11 @@
                 color: #555555;
 
                 @include fw(700);
+                @media (max-width: $breakpoint_md) {
+                    @include fw(400);
+                    font-size: 22px;
+                }
+                
             }
         }
 

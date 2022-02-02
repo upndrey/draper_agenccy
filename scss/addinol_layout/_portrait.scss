@@ -3,6 +3,10 @@
         padding-top: 120px;
         padding-bottom: 132px;
         background: #20A18F;
+        @media (max-width: $breakpoint_md) {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
     }
 
     p {
@@ -53,15 +57,16 @@
                 line-height: 130%;
                 color: #C4FFDB;
 
+                @include fw(700);
                 @media (max-width: $breakpoint_md) {
                     font-size: 20px;
+                    @include fw(400);
                     line-height: normal;
                 }
                 &:not(:last-child) {
                     margin-bottom: 25px;
                 }
 
-                @include fw(700);
 
                 &:before {
                     content: '';
