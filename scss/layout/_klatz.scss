@@ -59,6 +59,7 @@
                 margin: auto;
                 z-index: 1;
                 opacity: .2;
+                display: none;
             }
             @media (max-width: $breakpoint_sm) {
                 height: auto;
@@ -77,6 +78,12 @@
             @media (max-width: $breakpoint_md) {
                 text-align: center;
                 font-size: 35px;
+            }
+        }
+        &>.ulTitle {
+            @media (max-width: $breakpoint_md) {
+                width: 350px;
+                text-align: left;
             }
         }
         &>ul {

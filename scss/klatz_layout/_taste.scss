@@ -275,6 +275,9 @@
                 margin-bottom: 10px;
             }
         }
+        .video {
+            position: relative;
+        }
         .taste__1 {
             margin-bottom: 50px;
         }
@@ -314,89 +317,90 @@
             }
 
 
-            &.taste__1 {
-                &:before {
-                    content: '';
-                    position: absolute;
-                    left: -300px;
-                    bottom: 50px;
-                    width: 284px;
-                    height: 320px;
+        }
+        
+        .taste__1 {
+            &:before {
+                content: '';
+                position: absolute;
+                left: -300px;
+                bottom: 50px;
+                width: 284px;
+                height: 320px;
 
-                    @include image("taste__1.png");
-                }
+                @include image("taste__1.png");
             }
+        }
 
-            &.taste__2 {
-                &:before {
-                    content: '';
-                    position: absolute;
-                    right: -400px;
-                    top: 0;
-                    width: 391px;
-                    height: 402px;
+        .taste__2 {
+            &:before {
+                content: '';
+                position: absolute;
+                right: -400px;
+                top: 0;
+                width: 391px;
+                height: 402px;
 
-                    @include image("taste__2.png");
-                }
+                @include image("taste__2.png");
             }
+        }
 
-            &.taste__3 {
-                &:before {
-                    content: '';
-                    position: absolute;
-                    left: -420px;
-                    top: -290px;
-                    width: 495px;
-                    height: 519px;
+        .taste__3 {
+            &:before {
+                content: '';
+                position: absolute;
+                left: -420px;
+                top: -290px;
+                width: 495px;
+                height: 519px;
 
-                    @include image("taste__3.png");
-                }
-                &:after {
-                    content: '';
-                    position: absolute;
-                    right: -450px;
-                    bottom: -300px;
-                    width: 542px;
-                    height: 562px;
-
-                    @include image("taste__4.png");
-                }
+                @include image("taste__3.png");
             }
+            &:after {
+                content: '';
+                position: absolute;
+                right: -450px;
+                bottom: -300px;
+                width: 542px;
+                height: 562px;
 
-            &.taste__4 {
-                &:before {
-                    content: '';
-                    position: absolute;
-                    left: -300px;
-                    bottom: -175px;
-                    width: 350px;
-                    height: 398px;
-
-                    @include image("taste__5.png");
-                }
-                &:after {
-                    content: '';
-                    position: absolute;
-                    right: -400px;
-                    bottom: -200px;
-                    width: 341px;
-                    height: 318px;
-
-                    @include image("taste__6.png");
-                }
+                @include image("taste__4.png");
             }
+        }
 
-            &.taste__5 {
-                &:before {
-                    content: '';
-                    position: absolute;
-                    left: -300px;
-                    bottom: -280px;
-                    width: 325px;
-                    height: 383px;
+        .taste__4 {
+            &:before {
+                content: '';
+                position: absolute;
+                left: -300px;
+                bottom: -175px;
+                width: 350px;
+                height: 398px;
 
-                    @include image("taste__7.png");
-                }
+                @include image("taste__5.png");
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                right: -400px;
+                bottom: -200px;
+                width: 341px;
+                height: 318px;
+
+                @include image("taste__6.png");
+            }
+        }
+
+        .taste__5 {
+            &:before {
+                content: '';
+                position: absolute;
+                left: -300px;
+                bottom: -280px;
+                width: 325px;
+                height: 383px;
+
+                @include image("taste__7.png");
             }
         }
     }
