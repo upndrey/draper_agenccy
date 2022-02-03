@@ -3,11 +3,13 @@ body {
 }
 
 .fullscreen {
-	cursor:zoom-in;
-	&__parent {
-		position: relative;
+	@media (max-width: $breakpoint_md) {
 		cursor:zoom-in;
+	}
+	&__parent {
 		@media (max-width: $breakpoint_md) {
+			position: relative;
+			cursor:zoom-in;
 			&:before{
 				content: '';
 				position: absolute;

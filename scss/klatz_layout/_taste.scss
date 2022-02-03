@@ -1,5 +1,6 @@
 .taste {
-    z-index: 2;
+    z-index: 4;
+    position: relative;
     &__wrapper {
         z-index: 2;
         position: relative;
@@ -210,6 +211,9 @@
             }
             
         &.glamour {
+            @media (max-width: $breakpoint_md) {
+                width: 100%;
+            }
             .link {
                 span {
                     color: #e4544f;
@@ -226,12 +230,18 @@
         }
 
         &.glamour2 {
+            @media (max-width: $breakpoint_md) {
+                width: 100%;
+            }
             .title {
                 color: #7866D8;
             }
         }
 
         &.kids {
+            @media (max-width: $breakpoint_md) {
+                width: 100%;
+            }
             .link {
                 color: #FFEE57;
                 border-bottom: 2px solid #FFEE57;
@@ -265,8 +275,10 @@
                 margin-bottom: 10px;
             }
         }
-
-        .video {
+        .taste__1 {
+            margin-bottom: 50px;
+        }
+        iframe {
             position: relative;
             width: 828px;
             max-width: 100%;
@@ -278,9 +290,6 @@
             box-sizing: border-box;
             border: 10px solid #FFFFFF;
 
-            &:not(:last-child) {
-                margin-bottom: 50px;
-            }
 
             @media (max-width: $breakpoint_md) {
                 max-width: calc(100% - 20px);

@@ -6,8 +6,10 @@ function main() {
     const services = new Services();
     services.init();
 
-    const fullscreenImage = new FullscreenImage();
-    fullscreenImage.init();
+    if ($(window).width() <= 990) {
+        const fullscreenImage = new FullscreenImage();
+        fullscreenImage.init();
+    }
 }
 
 function Burger() {
@@ -79,6 +81,28 @@ Services.prototype.slick = function() {
       dots: true,
     });
     
+    $('#persons__slick').on('afterChange', (event, slick, currentSlide, nextSlide) => {
+        console.log(currentSlide);
+        switch(currentSlide) {
+            case 0:
+                document.querySelector(".persons>.title").innerHTML = `
+                    <h2>Персоны.</h2>
+                    <p>пример одного из сегмента</p>
+                `
+                break;
+            case 1:
+                document.querySelector(".persons>.title").innerHTML = `
+                    <h2>5 вопросов Шеррингтона.</h2>
+                `
+                break;
+            case 2:
+                document.querySelector(".persons>.title").innerHTML = `
+                    <h2>Матрица потребностей-решений</h2>
+                `
+                break;
+        }
+    });
+    
     $('#inside__slick').on('afterChange', (event, slick, currentSlide, nextSlide) => {
         console.log(currentSlide);
         switch(currentSlide) {
@@ -87,47 +111,11 @@ Services.prototype.slick = function() {
                     <p class="active">
                         Во-первых, достаточно высокий процент аудитории имеют в семье более одной пасты. Думали, данный сегмент меньше
                     </p>
-                    <p>
-                        Во-вторых, есть ощутимая часть аудитории (каждый четвертый респондент), которые обращают внимание на вкус пасты
-                    </p>
                 `
                 break;
             case 1:
                 document.querySelector(".dynamicText").innerHTML = `
                     <p class="active">
-                        2Во-первых, достаточно высокий процент аудитории имеют в семье более одной пасты. Думали, данный сегмент меньше
-                    </p>
-                    <p>
-                        Во-вторых, есть ощутимая часть аудитории (каждый четвертый респондент), которые обращают внимание на вкус пасты
-                    </p>
-                `
-                break;
-            case 2:
-                document.querySelector(".dynamicText").innerHTML = `
-                    <p class="active">
-                        3Во-первых, достаточно высокий процент аудитории имеют в семье более одной пасты. Думали, данный сегмент меньше
-                    </p>
-                    <p>
-                        Во-вторых, есть ощутимая часть аудитории (каждый четвертый респондент), которые обращают внимание на вкус пасты
-                    </p>
-                `
-                break;
-            case 3:
-                document.querySelector(".dynamicText").innerHTML = `
-                    <p class="active">
-                        4Во-первых, достаточно высокий процент аудитории имеют в семье более одной пасты. Думали, данный сегмент меньше
-                    </p>
-                    <p>
-                        Во-вторых, есть ощутимая часть аудитории (каждый четвертый респондент), которые обращают внимание на вкус пасты
-                    </p>
-                `
-                break;
-            case 4:
-                document.querySelector(".dynamicText").innerHTML = `
-                    <p class="active">
-                        5Во-первых, достаточно высокий процент аудитории имеют в семье более одной пасты. Думали, данный сегмент меньше
-                    </p>
-                    <p>
                         Во-вторых, есть ощутимая часть аудитории (каждый четвертый респондент), которые обращают внимание на вкус пасты
                     </p>
                 `
