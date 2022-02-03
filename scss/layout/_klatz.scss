@@ -79,11 +79,19 @@
                 text-align: center;
                 font-size: 35px;
             }
+            @media (max-width: $breakpoint_xxs) {
+                font-size: 25px;
+                line-height: normal;
+            }
         }
         &>.ulTitle {
             @media (max-width: $breakpoint_md) {
+                max-width: 100%;
                 width: 350px;
                 text-align: left;
+            }
+            @media (max-width: $breakpoint_xxs) {
+                font-size: 25px;
             }
         }
         &>ul {
@@ -91,6 +99,9 @@
             margin: 0;
             margin-bottom: 28px;
             max-width: 378px;
+            @media (max-width: $breakpoint_xxs) {
+                max-width: calc(100% - 20px) !important;
+            }
             li {
 
                 &:nth-child(1) {

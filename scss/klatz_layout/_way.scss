@@ -321,6 +321,14 @@
             margin-bottom: 117px;
             left: -20px;
 
+            @media (max-width: $breakpoint_md) {
+                &:before{
+                    display: none;
+                }
+                &:after{
+                    display: none;
+                }
+            }
             @media (max-width: $breakpoint_sm) {
                 flex-direction: column-reverse;
                 left: 0;

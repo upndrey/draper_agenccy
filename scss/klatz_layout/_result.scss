@@ -223,6 +223,9 @@
                 @media (max-width: $breakpoint_md) {
                     @include fw(400);
                 }
+                @media (max-width: $breakpoint_xxs) {
+                    max-width: calc(100% - 20px);
+                }
 
                 &:before {
                     content: '+';

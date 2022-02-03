@@ -15,5 +15,11 @@
     @media (max-width: $breakpoint_sm) {
         max-width: $width_sm;
     }
+    @media (max-width: $breakpoint_xs) {
+        max-width: $width_xs;
+    }
+    @media (max-width: $breakpoint_xxs) {
+        max-width: $width_xxs;
+    }
 } 
 

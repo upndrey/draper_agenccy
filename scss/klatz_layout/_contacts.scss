@@ -40,6 +40,9 @@
         @media (max-width: $breakpoint_sm) {
             top: -100px;
         }
+        @media (max-width: $breakpoint_xxs) {
+            padding: 10px;
+        }
 
         &>div {
             width: 1033px;

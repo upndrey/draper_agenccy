@@ -117,6 +117,11 @@
             @media (max-width: $breakpoint_lg) {
                 margin: 0 5px;
             }
+            @media (max-width: $breakpoint_xxs) {
+                
+                min-height: 248px;
+                height: fit-content;
+            }
             .title {
                 font-size: 28px;
                 line-height: 35px;

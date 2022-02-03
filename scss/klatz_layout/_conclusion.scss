@@ -157,6 +157,9 @@
                 font-size: 20px;
                 line-height: normal;
             }
+            @media (max-width: $breakpoint_xxs) {
+                max-width: 100%;
+            }
             &:nth-child(1) {
                 width: 237px;
                 margin-bottom: 99px;
