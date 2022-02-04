@@ -385,11 +385,33 @@
         }
         .slick-slide {
             margin: 0 10px;
+            
+            @media (max-width: $breakpoint_md) {
+                min-height: 419px;
+            }
+            @media (max-width: $breakpoint_sm) {
+                min-height: 721px;
+            }
+            @media (max-width: $breakpoint_xs) {
+                min-height: 809px;
+            }
+            @media (max-width: $breakpoint_xxs) {
+                min-height: 1007px;
+            }
             .active {
                 min-height: fit-content;
                 padding: 15px;
                 @media (max-width: $breakpoint_md) {
-                    min-height: 409px;
+                    min-height: 419px;
+                }
+                @media (max-width: $breakpoint_sm) {
+                    min-height: 721px;
+                }
+                @media (max-width: $breakpoint_xs) {
+                    min-height: 809px;
+                }
+                @media (max-width: $breakpoint_xxs) {
+                    min-height: 1007px;
                 }
                 &>.title {
                     margin-bottom: 15px;
@@ -404,6 +426,13 @@
                     @media (max-width: $breakpoint_sm) {
                         flex-direction: column;
                         align-items: center;
+                    }
+                    ul {
+                        &:last-child {
+                            @media (max-width: $breakpoint_xs) {
+                                max-width: 100%;
+                            }
+                        }
                     }
                     li>.title {
                         &.hasText {
@@ -429,6 +458,7 @@
                 }
                 &>.bottom {
                     text-align: center;
+                    margin-top: auto;
                 }
                 .btn_action {
                     max-width: 100%;

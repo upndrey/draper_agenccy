@@ -142,31 +142,41 @@ Services.prototype.slick = function() {
           slidesToScroll: 1,
           dots: true,
         });
+        let prevSlide = 0;
         $('.slick').on('afterChange', (event, slick, currentSlide, nextSlide) => {
-            console.log(currentSlide);
+            console.log(prevSlide, currentSlide);
+            if(prevSlide != currentSlide) {
+              $('.slick__elem ul>li>.title').each(function (elem) {
+                
+                this.classList.remove("rotated");
+                if(this.nextElementSibling)
+                  this.nextElementSibling.classList.add("hidden");    
+              });
+            }
+            prevSlide = currentSlide;
             switch(currentSlide) {
-                case 0:
-                    this.switchActive(this.brandStrategyLink);
-                    break;
-                case 1:
-                    this.switchActive(this.markStrategyLink);
-                    break;
-                case 2:
-                    this.switchActive(this.markAnalysisLink);
-                    break;
-                case 3:
-                    this.switchActive(this.markTzLink);
-                    break;
-                case 4:
-                    this.switchActive(this.creativeStrategyLink);
-                    break;
+              case 0:
+                this.switchActive(this.brandStrategyLink);
+                break;
+              case 1:
+                this.switchActive(this.markStrategyLink);
+                break;
+              case 2:
+                this.switchActive(this.markAnalysisLink);
+                break;
+              case 3:
+                this.switchActive(this.markTzLink);
+                break;
+              case 4:
+                this.switchActive(this.creativeStrategyLink);
+                break;
             }
         });
         $('.slick__elem ul>li>.title').click((e) => {
-            console.log(e.target.nextElementSibling);
-            e.target.classList.toggle("rotated");
-            if(e.target.nextElementSibling)
-                e.target.nextElementSibling.classList.toggle("hidden");    
+          console.log(e.target.nextElementSibling);
+          e.target.classList.toggle("rotated");
+          if(e.target.nextElementSibling)
+            e.target.nextElementSibling.classList.toggle("hidden"); 
         });
     } 
 }

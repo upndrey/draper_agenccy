@@ -61,6 +61,10 @@
             color: #FFFFFF;
 
             @include fw(700);
+            @media (max-width: $breakpoint_xs) {
+                font-size: 18px;
+                max-width: calc(100% - 120px);
+            }
         }
     }
 

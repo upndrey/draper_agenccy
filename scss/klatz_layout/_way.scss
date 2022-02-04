@@ -331,6 +331,7 @@
             }
             @media (max-width: $breakpoint_sm) {
                 flex-direction: column-reverse;
+                margin-top: 50px;
                 left: 0;
             }
             p {
@@ -398,9 +399,8 @@
         margin-bottom: 150px;
         
         @media (max-width: $breakpoint_sm) {
-            display: none;
+            margin-bottom: 25px;
         }
-
         h2 {
             position: relative;
             top: 24px;
@@ -507,6 +507,10 @@
                 left: 0px;
                 background: transparent;
             }
+            @media (max-width: $breakpoint_sm) {
+                min-height: 300px;
+            }
+
             &:before {
                 content: '';
                 width: 262px;
@@ -530,6 +534,29 @@
                 @include image("way__understand_left.png");
                 @media (max-width: $breakpoint_lg) {
                     opacity: .5;
+                }
+                @media (max-width: $breakpoint_sm) {
+                    display: none;
+                }
+            }
+                
+            @media (max-width: $breakpoint_sm) {
+                h2, img {
+                    display: none;
+                }
+                &:before {
+                    content: '';
+                    width: 512px;
+                    max-width: 100%;
+                    height: 285px;
+                    position: absolute;
+                    bottom: 33px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    border-radius: 0;
+                    opacity: 1;
+                    @include image("way__understand_mobile.png");
                 }
             }
         }
@@ -624,6 +651,9 @@
             img {
                 position: relative;
                 z-index: 5;
+                @media (max-width: $breakpoint_md) {
+                    width: 400px;
+                }
             }
 
             div {
@@ -641,6 +671,10 @@
                     height: 726px;
                     box-sizing: border-box;
                     border: 10px solid #fff;
+                    @media (max-width: $breakpoint_md) {
+                        height: 583px;
+                        bottom: 139px;
+                    }
                 }
 
                 &:after {

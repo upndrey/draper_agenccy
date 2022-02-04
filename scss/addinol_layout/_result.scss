@@ -8,6 +8,9 @@
         @media (max-width: $breakpoint_md) {
             padding-top: 75px;
         }
+        @media (max-width: $breakpoint_sm) {
+            padding-bottom: 203px;
+        }
     }
 
     &:after {
@@ -21,6 +24,9 @@
         @include image("result__car.png");
         @media (max-width: $breakpoint_lg) {
             z-index: 1;
+        }
+        @media (max-width: $breakpoint_sm) {
+            bottom: -231px;
         }
 
     }
