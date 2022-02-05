@@ -458,8 +458,8 @@
             }
 
             img {
-                width: 263px;
-                height: 506px;
+                width: 430px;
+                height: 570px;
                 position: relative;
                 z-index: 3;
                 @media (max-width: $breakpoint_lg) {
@@ -525,6 +525,7 @@
                 }
             }
             &:after {
+                display: none;
                 content: '';
                 width: 169px;
                 height: 211px;
