@@ -1,5 +1,5 @@
 .lovely {
-    
+
     &__wrapper {
         overflow: hidden;
         position: relative;
@@ -18,32 +18,38 @@
         right: -42px;
 
         @include image("lovely__vector.svg");
+
         @media (max-width: $breakpoint_lg) {
             opacity: .3;
         }
+
         @media (max-width: $breakpoint_sm) {
             display: none;
         }
     }
 
-    &:after{ 
+    &:after {
         z-index: 2;
         content: '';
-        width: 455px;
-        height: 430px;
+        width: 360px;
+        height: 593px;
         position: absolute;
-        top: 65px;
+        top: 20px;
         right: 0;
 
         @include image("lovely__img.png");
+
         @media (max-width: $breakpoint_lg) {
             opacity: .5;
         }
+
         @media (max-width: $breakpoint_md) {
             top: 0px;
         }
+
         @media (max-width: $breakpoint_sm) {
             opacity: .1;
+            top: -114px;
         }
     }
 
@@ -55,16 +61,20 @@
         line-height: 63px;
         color: #fff;
         @include fw(700);
+
         @media (max-width: $breakpoint_md) {
             @include fw(400);
             font-size: 30px;
             line-height: normal;
         }
+
         @media (max-width: $breakpoint_sm) {
             font-size: 20px;
         }
+
         &:first-child {
             margin-bottom: 65px;
+
             @media (max-width: $breakpoint_md) {
                 margin-bottom: 30px;
             }

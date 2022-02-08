@@ -133,8 +133,8 @@
             img {
                 position: relative;
                 display: block;
-                width: 521px;
-                height: 430px;
+                width: 667px;
+                height: 470px;
                 z-index: 2;
                 @media (max-width: $breakpoint_sm) {
                     max-width: 100%;
@@ -206,10 +206,13 @@
                 position: absolute;
                 bottom: -145px;
                 left: 35px;
-                width: 355px;
-                height: 255px;
+                width: 331px;
+                height: 214px;
                 @media (max-width: $breakpoint_lg) {
                     opacity: .5;
+                }
+                @media (max-width: $breakpoint_sm) {
+                    bottom: -200px;
                 }
             }
         }
@@ -224,7 +227,7 @@
         @media (max-width: $breakpoint_sm) {
             flex-direction: column;
             left: 0;
-            margin-top: 150px;
+            margin-top: 200px;
             margin-bottom: 100px;
         }
 

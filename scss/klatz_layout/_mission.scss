@@ -46,6 +46,9 @@
                 top: 0;
                 opacity: .2;
             }
+            @media (max-width: $breakpoint_sm) {
+                top: -100px;
+            }
         }
     }
 

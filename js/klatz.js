@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", main);
 function main() {
+    lazyload();
     const burger = new Burger();
     burger.init();
 
