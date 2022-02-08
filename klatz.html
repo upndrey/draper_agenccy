@@ -7,7 +7,12 @@
 	<link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/klatz.css">
 	<link rel="stylesheet" type="text/css" href="./css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="./css/video.css" />
     <title>Draper Agency | Klatz</title>
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://i.ytimg.com">
+    <link rel="preconnect" href="https://i9.ytimg.com">
+    <link rel="preconnect" href="https://s.ytimg.com">
     <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 </head>
 <body>
@@ -482,15 +487,17 @@
                         Также для мужской аудитории сделали первые <br>в России алкогольные пасты
                     </p>
                     <div class="video taste__1">
-                        <iframe
-                            src="https://www.youtube.com/embed/watch?v=ZFvbcBLb8Ec&list=PLr888cwqXWAjvbScC8bMXirpi7laGG9ml">
-                        </iframe>
-                        <!-- <video src="https://www.youtube.com/watch?v=ZFvbcBLb8Ec&list=PLr888cwqXWAjvbScC8bMXirpi7laGG9ml"></video> -->
+                        <div class="youtube" data-embed="ZFvbcBLb8Ec" data-list="PLr888cwqXWAjvbScC8bMXirpi7laGG9ml">
+                            <div class="play-button"></div>
+                        </div>
                     </div>
                     <div class="video taste__2">
-                        <iframe
+                        <!-- <iframe
                             src="https://www.youtube.com/embed/watch?v=5aC1BhaJBlM&list=PLr888cwqXWAjvbScC8bMXirpi7laGG9ml&index=4">
-                        </iframe>
+                        </iframe> -->
+                        <div class="youtube" data-embed="5aC1BhaJBlM" data-list="PLr888cwqXWAjvbScC8bMXirpi7laGG9ml" data-index="4">
+                            <div class="play-button"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="glamour">
@@ -498,9 +505,12 @@
                         Женская линейка <span>Glamour</span>
                     </a>
                     <div class="video taste__3">
-                        <iframe
+                        <!-- <iframe
                             src="https://www.youtube.com/embed/watch?v=pZqBAxMu8HY&list=PLr888cwqXWAggUL074qDBUowEo_jSmprs">
-                        </iframe>
+                        </iframe> -->
+                        <div class="youtube" data-embed="pZqBAxMu8HY" data-list="PLr888cwqXWAggUL074qDBUowEo_jSmprs">
+                            <div class="play-button"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="glamour2">
@@ -508,9 +518,12 @@
                         Не стали обижать девушек и сделали <br>алкопасту и для них
                     </p>
                     <div class="video taste__4">
-                        <iframe
+                        <!-- <iframe
                             src="https://www.youtube.com/embed/watch?v=8PayCqZoi-Y&list=PLr888cwqXWAhHEqyGzV7MZTTPgGXm9hIc">
-                        </iframe>
+                        </iframe> -->
+                        <div class="youtube" data-embed="8PayCqZoi-Y" data-list="PLr888cwqXWAhHEqyGzV7MZTTPgGXm9hIc">
+                            <div class="play-button"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="kids">
@@ -518,9 +531,12 @@
                         Детская линейка <span>Kids</span>
                     </a>
                     <div class="video taste__5">
-                        <iframe
+                        <!-- <iframe
                             src="https://www.youtube.com/embed/watch?v=ZwVevcMDG1A&list=PLr888cwqXWAjH1K5TW_jxBJazIyDIikVP">
-                        </iframe>
+                        </iframe> -->
+                        <div class="youtube" data-embed="ZwVevcMDG1A" data-list="PLr888cwqXWAjH1K5TW_jxBJazIyDIikVP">
+                            <div class="play-button"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -654,6 +670,7 @@
         </div>
     </div>
 </body>
+<script src="./js/video.js"></script>
 <script type="text/javascript" src="./js/jquery.js"></script>
 <script type="text/javascript" src="./js/slick.min.js"></script>
 <script src="./js/klatz.js"></script>
