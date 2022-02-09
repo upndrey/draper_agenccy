@@ -28,7 +28,7 @@ Form.prototype.init = function() {
   form.addEventListener("submit", function(e) {
     e.preventDefault();
     const formData = new FormData(this);
-    fetch("https://draper.tmweb.ru/send.php", {
+    fetch("https://draper.agency/send.php", {
       method: "post",
       body: formData
     })

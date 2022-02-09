@@ -1,9 +1,12 @@
 .popupForm {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: #fff;
-    padding: 15px 50px;
+    justify-content: space-between;
+    padding: 30px 60px;
+    height: 350px;
     width: fit-content;
     margin: auto;
     border-radius: 10px;
@@ -27,25 +30,47 @@
         }
     }
 
-    p {
+    p.title {
+        position: relative;
+        z-index: 2;
         font-size: 20px;
         @include fw(700);
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    p.subtitle {
+        position: relative;
+        z-index: 2;
+        font-size: 16px;
+        @include fw(400);
         margin-bottom: 30px;
         text-align: center;
     }
 
-    button {
-        border: 1px solid #000;
-        background: transparent;
-        color: #000;
-        cursor: pointer;
-        @include fw(700);
-        width: 100%;
-        height: 30px;
-        &:hover {
-            border: 1px solid #000;
-            background: #000;
-            color: #fff;
-        }
+    .btn_action {
+        position: relative;
+        z-index: 2;
     }
+
+    .contacts__img {
+        bottom: 12px;
+        z-index: 1;
+        width: 400px;
+    }
+
+    // button {
+    //     border: 1px solid #000;
+    //     background: transparent;
+    //     color: #000;
+    //     cursor: pointer;
+    //     @include fw(700);
+    //     width: 100%;
+    //     height: 30px;
+    //     &:hover {
+    //         border: 1px solid #000;
+    //         background: #000;
+    //         color: #fff;
+    //     }
+    // }
 }
