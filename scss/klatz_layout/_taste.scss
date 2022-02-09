@@ -198,6 +198,7 @@
         align-items: center;
 
         &>div {
+            max-width: 100%;
             &:nth-child(1) {
                 margin-bottom: 143px;
             }
@@ -286,6 +287,9 @@
             padding: 30px 32px;
             box-sizing: border-box;
             border: 10px solid #FFFFFF;
+            @media (max-width: $breakpoint_sm) {
+                padding: 10px;
+            }
         }
         .taste__1 {
             margin-bottom: 50px;
@@ -301,13 +305,9 @@
 
 
             @media (max-width: $breakpoint_md) {
-                max-width: calc(100% - 20px);
                 margin: auto;
             }
             @media (max-width: $breakpoint_sm) {
-                width: 100%;
-                padding: 5px;
-                border: 5px solid #FFFFFF;
                 margin: auto;
             }
             
