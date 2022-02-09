@@ -757,12 +757,16 @@
             </p>
             <form action="./send.php" method="POST" id="form">
                 <input type="hidden" name="secret" value="322">
-                <input type="text" name="email" required placeholder="Ваша почта" id="form_email">
+                <input type="email" name="email" required placeholder="Ваша почта" id="form_email">
                 <input type="text" name="phone" required placeholder="Ваш телефон" id="form_phone">
                 <input type="text" name="agency" placeholder="Агентство" id="form_agency">
                 <div class="label">
                     <input type="checkbox" name="agreement" id="agreement" required>
-                    <label for="agreement">соглашаюсь с <a target="_blank" href="./politika.pdf" class="politicsLink"> политикой конфиденциальности</a></label>
+                    <label for="agreement">
+                        <span>
+                            соглашаюсь с <a target="_blank" href="./politika.pdf" class="politicsLink"> политикой конфиденциальности</a>
+                        </span>
+                    </label>
                 </div>
                 <input type="submit" value="Отправить" name="submit" id="submit">
             </form>
