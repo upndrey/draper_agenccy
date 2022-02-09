@@ -43,7 +43,7 @@
         margin-left: 100px;
 
         @include fw(700);
-        @media (max-width: $breakpoint_md) {
+        @media (max-width: $breakpoint_lg) {
             font-size: 30px;
             line-height: normal;
             @include fw(400);
@@ -90,7 +90,7 @@
         justify-content: space-between;
         margin-bottom: 50px;
 
-        @media (max-width: $breakpoint_md) {
+        @media (max-width: $breakpoint_lg) {
             flex-direction: column;
             right: 0;
         }
@@ -123,7 +123,7 @@
                 color: #FFFFFF;
 
                 @include fw(700);
-                @media (max-width: $breakpoint_md) {
+                @media (max-width: $breakpoint_lg) {
                     font-size: 30px;
                     line-height: normal;
                     @include fw(400);
@@ -138,7 +138,7 @@
                 justify-content: space-between;
                 flex-wrap: wrap;
                 max-width: 608px;
-                @media (max-width: $breakpoint_md) {
+                @media (max-width: $breakpoint_lg) {
                     margin: auto;
                 }
                 &>div {
@@ -220,7 +220,7 @@
                 span {
                     border-bottom: 1px solid rgba(250, 221, 185, 0.75);;
                 }
-                @media (max-width: $breakpoint_md) {
+                @media (max-width: $breakpoint_lg) {
                     @include fw(400);
                 }
                 @media (max-width: $breakpoint_xxs) {
@@ -295,7 +295,7 @@
             @include fw(700);
 
             margin-bottom: 56px;
-            @media (max-width: $breakpoint_md) {
+            @media (max-width: $breakpoint_lg) {
                 font-size: 30px;
                 line-height: normal;
                 margin-bottom: 20px;
@@ -310,7 +310,7 @@
             border-radius: 10px;
             padding-top: 58px;
             padding-bottom: 58px;
-            @media (max-width: $breakpoint_md) {
+            @media (max-width: $breakpoint_lg) {
                 padding-top: 108px;
                 padding-bottom: 108px;
             }
@@ -348,7 +348,7 @@
                 width: 540px;
                 height: 379px;
                 margin-right: 50px;
-                @media (max-width: $breakpoint_md) {
+                @media (max-width: $breakpoint_lg) {
                     top: -90px;
                     left: 0px !important;
                     right: 0px;

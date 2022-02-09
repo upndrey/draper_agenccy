@@ -62,6 +62,7 @@
         bottom: 12px;
         z-index: 1;
         width: 400px;
+        @include image("way__evaluation_woman.png");
         @media (max-width: $breakpoint_sm) {
             right: -50px;
         }
