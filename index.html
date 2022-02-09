@@ -7,7 +7,11 @@
 	<link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/main.css">
 	<link rel="stylesheet" type="text/css" href="./css/slick.css" />
-    <title>Draper Agency</title>
+    <title>Draper Agency. Разработка бренд- и маркетинговых стратегий с дальнейшей реализацией.</title>
+    <meta charset="utf-8">
+	<meta name="description" content="Готовая команда для субподряда с честными ценами, сжатыми сроками и опытом сотрудничества с агентствами."> 
+    <meta name="Keywords" content="бренд стратегии, маркетинговые стратегии, маркетинг, продвижение, создание сайтов, лендинги, воронки, смм продвижение, smm"> 
+  
 </head>
 <body>
     <div class="nav__wrapper wrapper">
@@ -751,15 +755,16 @@
             <p>
                 Но мы можем рассказать о реализованных проектах по Зуму (без записи) и по демонстрации экрана показать наши остальные кейсы. 
             </p>
-            <form action="#">
-                <input type="text" name="name" placeholder="Ваша почта">
-                <input type="text" name="phone" placeholder="Ваш телефон">
-                <input type="text" name="agency" placeholder="Агентство">
+            <form action="./send.php" method="POST" id="form">
+                <input type="hidden" name="secret" value="322">
+                <input type="text" name="email" required placeholder="Ваша почта" id="form_email">
+                <input type="text" name="phone" required placeholder="Ваш телефон" id="form_phone">
+                <input type="text" name="agency" placeholder="Агентство" id="form_agency">
                 <div class="label">
-                    <input type="checkbox" name="agreement" id="agreement">
-                    <label for="agreement">соглашаюсь с политикой конфиденциальности</label>
+                    <input type="checkbox" name="agreement" id="agreement" required>
+                    <label for="agreement">соглашаюсь с <a target="_blank" href="./politika.pdf" class="politicsLink"> политикой конфиденциальности</a></label>
                 </div>
-                <input type="submit" value="Отправить">
+                <input type="submit" value="Отправить" name="submit" id="submit">
             </form>
             <div class="contacts__img"></div>
         </div>
@@ -822,10 +827,18 @@
                     <li class="teamLink"><a href="./index.html#team">Команда</a></li>
                     <li class="contactsLink"><a href="./index.html#contacts">Контакты</a></li>
                 </ul>
+                <a href="./politika.pdf" target="_blank" class="politicsLink1">Политика конфиденциальности</a>
             </div>
             <div class="footer__right">
                 <a href="tel:+74991300588" class="phone">8 (499) 130-05-88</a>
             </div>
+            <a href="./politika.pdf" target="_blank" class="politicsLink1_mobile">Политика конфиденциальности</a>
+        </div>
+    </div>
+    <div class="popupForm__wrapper hidden">
+        <div class="popupForm">
+            <p>Ваша заявка отправлена</p>
+            <button>Окей</button>
         </div>
     </div>
 </body>

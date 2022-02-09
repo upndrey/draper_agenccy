@@ -19,6 +19,8 @@
     }
 
     &__left {
+
+        position: relative;
         display: flex;
         align-items: center;
         @media (max-width: $breakpoint_sm) {
@@ -66,5 +68,29 @@
         @include fw(700);
         line-height: 16px;
         font-size: 14px;
+    }
+    .politicsLink1 {
+      @include fw(400);
+      font-size: 14px;
+      margin-top: 10px;
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+      color: #fff;
+      &_mobile {
+        @media (min-width: $breakpoint_sm) {
+          display: none;
+        }
+        @media (max-width: $breakpoint_sm) {
+          max-width: 100%;
+          @include fw(400);
+          font-size: 14px;
+          margin-top: 10px;
+          color: #fff;
+        }
+      }
+      @media (max-width: $breakpoint_sm) {
+        display: none;
+      }
     }
 }

@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", main);
 function main() {
+    const popup = new Popup();
+    popup.init();
+
+    const form = new Form(popup);
+    form.init();
+
+
     const nav = new Nav();
     nav.init();
 
@@ -9,6 +16,41 @@ function main() {
     const services = new Services();
     services.init();
 
+}
+
+function Form(popup) {
+  this.popup = popup;
+}
+
+Form.prototype.init = function() {
+  let form = document.getElementById("form");
+  let formEntity = this;
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    fetch("https://draper.tmweb.ru/send.php", {
+      method: "post",
+      body: formData
+    })
+    .then( (response) => { 
+      formEntity.popup.wrapper.classList.remove("hidden");
+    });
+  });
+}
+
+function Popup() {
+  this.wrapper = document.querySelector(".popupForm__wrapper");
+  this.button = document.querySelector(".popupForm>button");
+}
+
+Popup.prototype.init = function() {
+  this.button.addEventListener("click", () => {
+    this.wrapper.classList.add("hidden");
+  });
+  this.wrapper.addEventListener("click", (e) => {
+    if(e.target == this.wrapper)
+      this.wrapper.classList.add("hidden");
+  });
 }
 
 function Burger() {

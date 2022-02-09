@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://i9.ytimg.com">
     <link rel="preconnect" href="https://s.ytimg.com">
     <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+    
 </head>
 <body>
     <div class="nav__wrapper wrapper">
@@ -635,19 +637,20 @@
     </div>
     
     <div class="klatz__contacts contacts__wrapper wrapper">
-        <div class="contacts container">
+        <div class="contacts container" id="contacts">
             <div>
                 <p>
                     Если хотите узнать детали кейса или обсудить проект вашего клиента – пишите. Будем рады знакомству.
                 </p>
-                <form action="#">
-                    <input type="text" name="email" placeholder="Ваша почта">
-                    <input type="text" name="name" placeholder="Ваше имя">
+                <form action="./send.php" method="POST" id="form">
+                    <input type="hidden" name="secret" value="322">
+                    <input type="text" name="email" required placeholder="Ваша почта" id="form_email">
+                    <input type="text" name="name" required placeholder="Ваше имя" id="form_name">
                     <div class="label">
-                        <input type="checkbox" name="agreement" id="agreement">
-                        <label for="agreement">соглашаюсь с политикой конфиденциальности</label>
+                        <input type="checkbox" name="agreement" id="agreement" required>
+                        <label for="agreement">соглашаюсь с <a target="_blank" href="./politika.pdf" class="politicsLink"> политикой конфиденциальности</a></label>
                     </div>
-                    <input type="submit" value="Отправить">
+                    <input type="submit" value="Отправить" name="submit" id="submit">
                 </form>
                 <div class="contacts__img1" class="lazyload"></div>
             </div>
@@ -663,10 +666,18 @@
                     <li class="teamLink"><a href="./index.html#team">Команда</a></li>
                     <li class="contactsLink"><a href="./index.html#contacts">Контакты</a></li>
                 </ul>
+                <a href="./politika.pdf" target="_blank" class="politicsLink1">Политика конфиденциальности</a>
             </div>
             <div class="footer__right">
                 <a href="tel:+74991300588" class="phone">8 (499) 130-05-88</a>
             </div>
+            <a href="./politika.pdf" target="_blank" class="politicsLink1_mobile">Политика конфиденциальности</a>
+        </div>
+    </div>
+    <div class="popupForm__wrapper hidden">
+        <div class="popupForm">
+            <p>Ваша заявка отправлена</p>
+            <button>Окей</button>
         </div>
     </div>
 </body>
