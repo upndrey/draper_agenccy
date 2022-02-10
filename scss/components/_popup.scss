@@ -60,7 +60,7 @@
 
     .contacts__img {
         z-index: 1;
-        bottom: 100px;
+        bottom: 109px;
         right: 0px;
         left: 0px;
         margin: auto;
@@ -68,7 +68,6 @@
         height: 125px;
         @include image("popup__girl.png");
         @media (max-width: $breakpoint_sm) {
-            bottom: 100px;
         }
     }
 
