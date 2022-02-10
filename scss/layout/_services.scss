@@ -188,7 +188,7 @@
         }
 
         &>div,
-        .slick__elem .active {
+        .slick__elem>.active {
             display: none;
             flex-direction: column;
             width: 100%;
@@ -281,6 +281,8 @@
                 .btn_action {
                     width: 300px;
                     height: 40px;
+                    max-height: 40px;
+                    min-height: 40px;
                 }
             }
 
@@ -398,7 +400,7 @@
             @media (max-width: $breakpoint_xxs) {
                 min-height: 1007px;
             }
-            .active {
+            &>div>div>.active {
                 min-height: fit-content;
                 padding: 15px;
                 @media (max-width: $breakpoint_md) {
@@ -463,6 +465,7 @@
                 .btn_action {
                     max-width: 100%;
                     text-align: center;
+
                 }
             }
         }
