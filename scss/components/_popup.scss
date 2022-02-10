@@ -60,16 +60,15 @@
 
     .contacts__img {
         z-index: 1;
-        bottom: 95px;
+        bottom: 100px;
         right: 0px;
-        width: 250px;
-        height: 150px;
+        left: 0px;
+        margin: auto;
+        width: 200px;
+        height: 125px;
         @include image("popup__girl.png");
         @media (max-width: $breakpoint_sm) {
-            bottom: 95px;
-            right: 0px;
-            width: 250px;
-            height: 150px;
+            bottom: 100px;
         }
     }
 
