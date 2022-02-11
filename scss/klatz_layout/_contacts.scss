@@ -5,8 +5,6 @@
     z-index: 1;
     background: #0C090D;
 
-    @media (max-width: $breakpoint_md) {
-    }
     @media (max-width: $breakpoint_sm) {
         height: fit-content;
         padding-top: 180px;
@@ -25,7 +23,9 @@
         @include image("klatz__contacts_bg.png", cover);
     }
     &>.contacts {
-        max-width: calc(1250px + 10px);
+        @media (min-width: $breakpoint_lg) {
+            max-width: calc(1250px + 10px);
+        }
         position: relative;
         z-index: 3;
         top: -375px;
@@ -36,6 +36,7 @@
         padding: 76px 113px 92px 106px;
         @media (max-width: $breakpoint_md) {
             padding: 30px;
+            top: 0;
         }
         @media (max-width: $breakpoint_sm) {
             top: -100px;

@@ -4,6 +4,9 @@
         padding-top: 142px;
         padding-bottom: 447px;
         background: #312A2B;
+        @media (max-width: $breakpoint_md) {
+            padding-bottom: 120px;
+        }
         @media (max-width: $breakpoint_sm) {
             padding-bottom: 120px;
         }
