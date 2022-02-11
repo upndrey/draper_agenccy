@@ -64,6 +64,16 @@
         align-items: center;
     }
 
+    .inst {
+        width: 24px;
+        height: 24px;
+        margin-right: 23px;
+        @include image("inst.svg");
+        @media (max-width: $breakpoint_xs) {
+            margin-right: 5px;
+        }
+    }
+
     .phone {
         @include fw(700);
         line-height: 16px;
