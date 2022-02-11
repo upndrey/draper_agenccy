@@ -14,8 +14,10 @@ function main() {
     const services = new Services();
     services.init();
 
-    const fullscreenImage = new FullscreenImage();
-    fullscreenImage.init();
+    if ($(window).width() <= 1260) {
+        const fullscreenImage = new FullscreenImage();
+        fullscreenImage.init();
+    }
 }
 
 function Form(popup) {

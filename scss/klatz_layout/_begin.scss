@@ -85,6 +85,7 @@
         &:first-child {
             max-width: 298px;
             margin-right: 71px;
+            align-self: flex-start;
             @media (max-width: $breakpoint_lg) {
                 margin-right: 0px;
             }
@@ -94,7 +95,7 @@
                 margin-bottom: 50px;
             }
             &>.title {
-                margin-bottom: 58px;
+                margin-bottom: 77px;
                 @media (max-width: $breakpoint_md) {
                     margin-bottom: 20px;
                 }
@@ -111,8 +112,16 @@
         &:last-child {
             margin-left: 37px;
             max-width: 404px;
+            align-self: flex-start;
             @media (max-width: $breakpoint_lg) {
                 margin-left: 0px;
+            }
+            @media (max-width: $breakpoint_md) {
+                max-width: 100%;
+                width: 404px;
+                margin: auto;
+                text-align: center;
+                margin-top: 50px;
             }
             &>.title {
                 margin-bottom: 71px;

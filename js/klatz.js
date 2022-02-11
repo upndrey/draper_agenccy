@@ -14,7 +14,7 @@ function main() {
     const services = new Services();
     services.init();
 
-    if ($(window).width() <= 990) {
+    if ($(window).width() <= 1260) {
         const fullscreenImage = new FullscreenImage();
         fullscreenImage.init();
     }

@@ -178,7 +178,7 @@ Services.prototype.init = function() {
 };
 
 Services.prototype.slick = function() {
-    if ($(window).width() <= 990) {
+    if ($(window).width() <= 1260) {
         $('.slick').slick({
           slidesToShow: 1,
           slidesToScroll: 1,
